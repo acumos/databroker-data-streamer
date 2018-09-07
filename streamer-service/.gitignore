@@ -1,0 +1,5 @@
+/target/
+/logs/
+/.project/
+/bin/
+/src/main/resources/application.properties
