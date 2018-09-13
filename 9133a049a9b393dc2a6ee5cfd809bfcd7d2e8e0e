@@ -223,6 +223,23 @@
     },
     {
       "key": {
+        "uuid": "736bf8af_372dfb0b",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/config/CustomWebSecurityConfigurerAdapter.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 225
+      },
+      "writtenOn": "2018-09-13T22:39:13Z",
+      "side": 1,
+      "message": "should not be -dataset, change accordingly",
+      "revId": "9133a049a9b393dc2a6ee5cfd809bfcd7d2e8e0e",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "85efff3f_0d9bff7b",
         "filename": "streamer-service/src/main/java/org/acumos/streamer/config/SwaggerConfiguration.java",
         "patchSetId": 6
