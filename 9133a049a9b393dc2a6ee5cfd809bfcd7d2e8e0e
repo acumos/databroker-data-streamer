@@ -206,6 +206,23 @@
     },
     {
       "key": {
+        "uuid": "7c49368f_4ab84757",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/controller/RestConsumerController.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 225
+      },
+      "writtenOn": "2018-09-13T22:09:07Z",
+      "side": 1,
+      "message": "dont you think it should be /streamer?",
+      "revId": "9133a049a9b393dc2a6ee5cfd809bfcd7d2e8e0e",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "94514519_b8bac5d3",
         "filename": "streamer-service/src/main/java/org/acumos/streamer/controller/RestConsumerService.java",
         "patchSetId": 6
