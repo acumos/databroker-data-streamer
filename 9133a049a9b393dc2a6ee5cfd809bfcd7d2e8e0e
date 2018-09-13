@@ -172,6 +172,23 @@
     },
     {
       "key": {
+        "uuid": "50e4b2de_3f97ba4b",
+        "filename": "streamer-service/pom.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 225
+      },
+      "writtenOn": "2018-09-13T22:18:45Z",
+      "side": 1,
+      "message": "change this to \u003cstart-class\u003eorg.acumos.streamer.DataStreamerApplication\u003c/start-class\u003e",
+      "revId": "9133a049a9b393dc2a6ee5cfd809bfcd7d2e8e0e",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "85efff3f_0d9bff7b",
         "filename": "streamer-service/src/main/java/org/acumos/streamer/config/SwaggerConfiguration.java",
         "patchSetId": 6
