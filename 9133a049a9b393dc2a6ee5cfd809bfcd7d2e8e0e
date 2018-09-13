@@ -1,0 +1,276 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e08bc43d_e27a3080",
+        "filename": "streamer-catalog-service/.project",
+        "patchSetId": 6
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 225
+      },
+      "writtenOn": "2018-09-13T22:01:15Z",
+      "side": 1,
+      "message": "add this to .gitignore",
+      "revId": "9133a049a9b393dc2a6ee5cfd809bfcd7d2e8e0e",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "337471c1_a129de9c",
+        "filename": "streamer-catalog-service/bin/.project",
+        "patchSetId": 6
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 225
+      },
+      "writtenOn": "2018-09-13T22:01:15Z",
+      "side": 1,
+      "message": "add this to .gitignore\n\ngitignore bin folder",
+      "revId": "9133a049a9b393dc2a6ee5cfd809bfcd7d2e8e0e",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ef06976f_4748d5b7",
+        "filename": "streamer-catalog-service/logs/datastreamer-catalog/datastreamer-catalog-svc.log",
+        "patchSetId": 6
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 225
+      },
+      "writtenOn": "2018-09-13T22:01:15Z",
+      "side": 1,
+      "message": ".gitignore",
+      "revId": "9133a049a9b393dc2a6ee5cfd809bfcd7d2e8e0e",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "19681a6e_2d9bd99a",
+        "filename": "streamer-catalog-service/pom.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 225
+      },
+      "writtenOn": "2018-09-13T22:01:15Z",
+      "side": 1,
+      "message": "change it to \u003cversion\u003e1.5.15.RELEASE\u003c/version\u003e",
+      "revId": "9133a049a9b393dc2a6ee5cfd809bfcd7d2e8e0e",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "125919e9_a8dba29e",
+        "filename": "streamer-catalog-service/src/main/java/org/acumos/streamercatalog/controller/RestCatalogService.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 225
+      },
+      "writtenOn": "2018-09-13T22:01:15Z",
+      "side": 1,
+      "message": "javadoc",
+      "revId": "9133a049a9b393dc2a6ee5cfd809bfcd7d2e8e0e",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b2536b92_5a4a0d6e",
+        "filename": "streamer-catalog-service/src/main/java/org/acumos/streamercatalog/service/CatalogService.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 225
+      },
+      "writtenOn": "2018-09-13T22:01:15Z",
+      "side": 1,
+      "message": "javadoc",
+      "revId": "9133a049a9b393dc2a6ee5cfd809bfcd7d2e8e0e",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bb63858a_0537654c",
+        "filename": "streamer-service/.project",
+        "patchSetId": 6
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 225
+      },
+      "writtenOn": "2018-09-13T22:01:15Z",
+      "side": 1,
+      "message": "do not commit this add to .gitignore",
+      "revId": "9133a049a9b393dc2a6ee5cfd809bfcd7d2e8e0e",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "358d5cfc_111be110",
+        "filename": "streamer-service/logs/datastreamer-catalog/datastreamer-catalog-svc.log",
+        "patchSetId": 6
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 225
+      },
+      "writtenOn": "2018-09-13T22:01:15Z",
+      "side": 1,
+      "message": "add to .gitignore, do not commit log",
+      "revId": "9133a049a9b393dc2a6ee5cfd809bfcd7d2e8e0e",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0b1521a9_213c0dd8",
+        "filename": "streamer-service/pom.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 225
+      },
+      "writtenOn": "2018-09-13T22:01:15Z",
+      "side": 1,
+      "message": "change it to \u003cversion\u003e1.5.15.RELEASE\u003c/version\u003e",
+      "revId": "9133a049a9b393dc2a6ee5cfd809bfcd7d2e8e0e",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "85efff3f_0d9bff7b",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/config/SwaggerConfiguration.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 225
+      },
+      "writtenOn": "2018-09-13T22:01:15Z",
+      "side": 1,
+      "message": "is it dataset? change to data streamer",
+      "revId": "9133a049a9b393dc2a6ee5cfd809bfcd7d2e8e0e",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f3aca29_0f6fa619",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/config/SwaggerConfiguration.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 225
+      },
+      "writtenOn": "2018-09-13T22:01:15Z",
+      "side": 1,
+      "message": "see above",
+      "revId": "9133a049a9b393dc2a6ee5cfd809bfcd7d2e8e0e",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "87a17742_ec9c1787",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/config/SwaggerConfiguration.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 225
+      },
+      "writtenOn": "2018-09-13T22:01:15Z",
+      "side": 1,
+      "message": "change url",
+      "revId": "9133a049a9b393dc2a6ee5cfd809bfcd7d2e8e0e",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "94514519_b8bac5d3",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/controller/RestConsumerService.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 225
+      },
+      "writtenOn": "2018-09-13T22:01:15Z",
+      "side": 1,
+      "message": "java doc plz",
+      "revId": "9133a049a9b393dc2a6ee5cfd809bfcd7d2e8e0e",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e6aaa781_c83f8c11",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/service/ConsumerService.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 225
+      },
+      "writtenOn": "2018-09-13T22:01:15Z",
+      "side": 1,
+      "message": "interface should have documenation",
+      "revId": "9133a049a9b393dc2a6ee5cfd809bfcd7d2e8e0e",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f5414a2e_ca363666",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/service/MessageRouterTask.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 225
+      },
+      "writtenOn": "2018-09-13T22:01:15Z",
+      "side": 1,
+      "message": "remove this hardcoding, why we need this?\n\nshould not be using encrypted pwd",
+      "revId": "9133a049a9b393dc2a6ee5cfd809bfcd7d2e8e0e",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "675ab2a4_839fe10d",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/service/PublisherService.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 225
+      },
+      "writtenOn": "2018-09-13T22:01:15Z",
+      "side": 1,
+      "message": "interface should have java docs",
+      "revId": "9133a049a9b393dc2a6ee5cfd809bfcd7d2e8e0e",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
