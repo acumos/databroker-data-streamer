@@ -36,6 +36,23 @@
     },
     {
       "key": {
+        "uuid": "87975b47_fb88c061",
+        "filename": "streamer-catalog-service/bin/pom.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 225
+      },
+      "writtenOn": "2018-09-13T22:35:23Z",
+      "side": 1,
+      "message": "\u003cstart-class\u003eorg.acumos.streamercatalog.DataStreamerCatalogApplication\u003c/start-class\u003e",
+      "revId": "9133a049a9b393dc2a6ee5cfd809bfcd7d2e8e0e",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ef06976f_4748d5b7",
         "filename": "streamer-catalog-service/logs/datastreamer-catalog/datastreamer-catalog-svc.log",
         "patchSetId": 6
