@@ -70,6 +70,23 @@
     },
     {
       "key": {
+        "uuid": "3edf3bb4_d1614c05",
+        "filename": "streamer-catalog-service/pom.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 225
+      },
+      "writtenOn": "2018-09-13T22:27:13Z",
+      "side": 1,
+      "message": "path should be streamercatalog",
+      "revId": "9133a049a9b393dc2a6ee5cfd809bfcd7d2e8e0e",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "125919e9_a8dba29e",
         "filename": "streamer-catalog-service/src/main/java/org/acumos/streamercatalog/controller/RestCatalogService.java",
         "patchSetId": 6
