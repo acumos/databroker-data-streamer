@@ -104,6 +104,23 @@
     },
     {
       "key": {
+        "uuid": "ad246cf0_667f4f7c",
+        "filename": "streamer-catalog-service/src/main/resources/application.properties",
+        "patchSetId": 6
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 225
+      },
+      "writtenOn": "2018-09-13T22:14:50Z",
+      "side": 1,
+      "message": "remove cmlp-streamer",
+      "revId": "9133a049a9b393dc2a6ee5cfd809bfcd7d2e8e0e",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "bb63858a_0537654c",
         "filename": "streamer-service/.project",
         "patchSetId": 6
@@ -285,6 +302,23 @@
       "writtenOn": "2018-09-13T22:01:15Z",
       "side": 1,
       "message": "interface should have java docs",
+      "revId": "9133a049a9b393dc2a6ee5cfd809bfcd7d2e8e0e",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aa6e2a9e_ddb92f1d",
+        "filename": "streamer-service/src/main/resources/application.properties",
+        "patchSetId": 6
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 225
+      },
+      "writtenOn": "2018-09-13T22:14:50Z",
+      "side": 1,
+      "message": "this should be just streamer, remove cmlp",
       "revId": "9133a049a9b393dc2a6ee5cfd809bfcd7d2e8e0e",
       "serverId": "655300a2-7a56-4504-9153-881edd907bea",
       "unresolved": false
