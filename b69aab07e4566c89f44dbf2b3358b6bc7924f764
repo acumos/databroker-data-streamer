@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "76a56551_880f4fa1",
+        "filename": "docs/release-notes.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 225
+      },
+      "writtenOn": "2018-09-14T19:41:50Z",
+      "side": 1,
+      "message": "change version number 1.17.15",
+      "revId": "b69aab07e4566c89f44dbf2b3358b6bc7924f764",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
