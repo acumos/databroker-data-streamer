@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cc4e7e2c_44de6b90",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/exception/CmlpDataSrcException.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 225
+      },
+      "writtenOn": "2018-09-17T14:43:28Z",
+      "side": 1,
+      "message": "remove CMLP from filename, remove cMLP from everywhere",
+      "revId": "302cdfd59fae4f50ac9b2bd4c1a309d99e845821",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
