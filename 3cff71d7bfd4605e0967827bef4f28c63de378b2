@@ -1,0 +1,1761 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "83a79cb2_0d2378cd",
+        "filename": ".gitignore",
+        "patchSetId": 11
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Also should add a .gitattributes file to this repo",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ae1318a_d575f81d",
+        "filename": ".gitignore",
+        "patchSetId": 11
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": ".classpath and so on - best to copy an existing .gitignore file",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bee68bb8_433eccac",
+        "filename": "README.md",
+        "patchSetId": 11
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Data streamer catalog and server?",
+      "range": {
+        "startLine": 1,
+        "startChar": 9,
+        "endLine": 1,
+        "endChar": 16
+      },
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aad05faf_59e1a32c",
+        "filename": "README.md",
+        "patchSetId": 11
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Is this true?",
+      "range": {
+        "startLine": 4,
+        "startChar": 43,
+        "endLine": 5,
+        "endChar": 58
+      },
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8b81749f_0b5850bf",
+        "filename": "docs/database_install.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "This file is not pulled in by index.rst",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c5c6d2c1_123edcfd",
+        "filename": "docs/database_install.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Please add header:\n\n\u003d\u003d\u003d\u003d\nData\n\u003d\u003d\u003d\u003d\n\nyou know, like everywhere else",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a9f09d50_a3826975",
+        "filename": "docs/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Pls fix line length",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "66b099ce_57eabf96",
+        "filename": "docs/index.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Add ref to your database_install doc",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "324fd20f_20fdf202",
+        "filename": "docs/overview.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "This link looks wrong - this is the data STREAMER not SET.",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4f104494_85bccca1",
+        "filename": "docs/overview.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Has a review been submitted to create this job?  The link does not work yet",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7dad0c82_ea0e2c1e",
+        "filename": "docs/release-notes.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "pls fix line len",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a14ff959_9a3074dd",
+        "filename": "docs/release-notes.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Pls fix line length",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6af494a3_a4ae05c1",
+        "filename": "streamer-catalog-service/pom.xml",
+        "patchSetId": 11
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Suggest going to 1.5.16.RELEASE which came out last week",
+      "range": {
+        "startLine": 24,
+        "startChar": 15,
+        "endLine": 24,
+        "endChar": 17
+      },
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a2e92b79_4d7c9335",
+        "filename": "streamer-catalog-service/pom.xml",
+        "patchSetId": 11
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Remove don\u0027t comment out",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "92582f4e_005a7d2c",
+        "filename": "streamer-catalog-service/pom.xml",
+        "patchSetId": 11
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Same",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1e77a657_36b3bdef",
+        "filename": "streamer-catalog-service/pom.xml",
+        "patchSetId": 11
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Suggest using 2.7.0",
+      "range": {
+        "startLine": 101,
+        "startChar": 12,
+        "endLine": 101,
+        "endChar": 17
+      },
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b715c48a_580dd363",
+        "filename": "streamer-catalog-service/pom.xml",
+        "patchSetId": 11
+      },
+      "lineNbr": 201,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Remove don\u0027t comment out",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "41a23355_c2d8d87f",
+        "filename": "streamer-catalog-service/pom.xml",
+        "patchSetId": 11
+      },
+      "lineNbr": 303,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Why do you need a jar with only classes here?",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3f527257_3e8066d2",
+        "filename": "streamer-catalog-service/src/main/java/org/acumos/streamercatalog/DataStreamerCatalogApplication.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Is this the catalog service or stream service?",
+      "range": {
+        "startLine": 41,
+        "startChar": 33,
+        "endLine": 41,
+        "endChar": 40
+      },
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "17cb4c0b_1a6137f6",
+        "filename": "streamer-catalog-service/src/main/java/org/acumos/streamercatalog/DataStreamerCatalogApplication.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Do you need a TaskExecutor?",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8fa2092a_29ac66c9",
+        "filename": "streamer-catalog-service/src/main/java/org/acumos/streamercatalog/common/HelperTool.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Pls use more specific name",
+      "range": {
+        "startLine": 62,
+        "startChar": 13,
+        "endLine": 62,
+        "endChar": 23
+      },
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "893b6079_4689409b",
+        "filename": "streamer-catalog-service/src/main/java/org/acumos/streamercatalog/common/HelperTool.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 251,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "remove don\u0027t comment out",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fb9453fb_5ee247db",
+        "filename": "streamer-catalog-service/src/main/java/org/acumos/streamercatalog/common/HelperTool.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 315,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "I believe the advice here is to avoid the four-letter sequence \"Cmlp\"",
+      "range": {
+        "startLine": 315,
+        "startChar": 13,
+        "endLine": 315,
+        "endChar": 33
+      },
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4dc3abf1_3e5651c0",
+        "filename": "streamer-catalog-service/src/main/java/org/acumos/streamercatalog/common/HelperTool.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 474,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "remove don\u0027t comment out",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2b0691fd_bb73fa53",
+        "filename": "streamer-catalog-service/src/main/java/org/acumos/streamercatalog/config/SwaggerConfiguration.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Suggest upgrading to avoid the deprecation warning here, you just have to add one more parameter, a call to a constructor\n\t\t\t\t\nnew ArrayList\u003cVendorExtension\u003e()); // vendor extensions",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b1c3412e_a557e25f",
+        "filename": "streamer-catalog-service/src/main/java/org/acumos/streamercatalog/connection/DbUtilities.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Why are critical values hardcoded?  Suggest making an interface class with constants",
+      "range": {
+        "startLine": 142,
+        "startChar": 50,
+        "endLine": 142,
+        "endChar": 55
+      },
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "48941769_1456c62b",
+        "filename": "streamer-catalog-service/src/main/java/org/acumos/streamercatalog/connection/DbUtilities.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 244,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "remove, don\u0027t comment out",
+      "range": {
+        "startLine": 244,
+        "startChar": 24,
+        "endLine": 244,
+        "endChar": 44
+      },
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c8e06eb1_53915b79",
+        "filename": "streamer-catalog-service/src/main/java/org/acumos/streamercatalog/controller/RestCatalogController.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "pls remove all @author annotations from Gerrit code",
+      "range": {
+        "startLine": 48,
+        "startChar": 11,
+        "endLine": 48,
+        "endChar": 17
+      },
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "905c1ee6_f8b414cd",
+        "filename": "streamer-catalog-service/src/main/java/org/acumos/streamercatalog/controller/RestCatalogController.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "class names should be logged by default, little need to hardcode them in every message",
+      "range": {
+        "startLine": 100,
+        "startChar": 35,
+        "endLine": 100,
+        "endChar": 56
+      },
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2c10c487_d67b68d9",
+        "filename": "streamer-catalog-service/src/main/java/org/acumos/streamercatalog/controller/RestCatalogService.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Pls remove @author",
+      "range": {
+        "startLine": 26,
+        "startChar": 11,
+        "endLine": 26,
+        "endChar": 17
+      },
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d9037dce_b4d17e83",
+        "filename": "streamer-catalog-service/src/main/java/org/acumos/streamercatalog/controller/RestCatalogService.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Interface classes must document the contract including all parameters, this will fail in Javadoc validation",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "223e30e0_d12fea86",
+        "filename": "streamer-catalog-service/src/main/java/org/acumos/streamercatalog/controller/RestCatalogServiceImpl.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Never print stack trace, those just get lost.  Use the logger:\n\nlogger.error(\"methodName failed\", ex);",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "38f0e6bd_32e429bc",
+        "filename": "streamer-catalog-service/src/main/java/org/acumos/streamercatalog/controller/RestCatalogServiceImpl.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Log the failure",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b69f7df9_e7eb7e11",
+        "filename": "streamer-catalog-service/src/main/java/org/acumos/streamercatalog/controller/RestCatalogServiceImpl.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "See above re stack trace and logging exceptions",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "395fdd05_18105646",
+        "filename": "streamer-catalog-service/src/main/java/org/acumos/streamercatalog/controller/RestCatalogServiceImpl.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 177,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "See above re stack trace and logging exceptions",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f4fe4de_aee9390d",
+        "filename": "streamer-catalog-service/src/main/java/org/acumos/streamercatalog/controller/RestCatalogServiceImpl.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 196,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "See above re stack trace and logging exceptions",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2c8414da_755da4bb",
+        "filename": "streamer-catalog-service/src/main/java/org/acumos/streamercatalog/controller/RestCatalogServiceImpl.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 216,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "See above re stack trace and logging exceptions",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b4ecd938_3c548680",
+        "filename": "streamer-catalog-service/src/main/java/org/acumos/streamercatalog/exception/CmlpDataSrcException.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Remove @author",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5020e603_04e61e05",
+        "filename": "streamer-catalog-service/src/main/java/org/acumos/streamercatalog/exception/CmlpDataSrcException.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "I believe the guidance I have seen is to remove Cmlp from class names",
+      "range": {
+        "startLine": 33,
+        "startChar": 13,
+        "endLine": 33,
+        "endChar": 53
+      },
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3e9add2c_9b2f22df",
+        "filename": "streamer-catalog-service/src/main/java/org/acumos/streamercatalog/model/CatalogObject.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Pls remove",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ed2f613_62e4b64c",
+        "filename": "streamer-catalog-service/src/main/java/org/acumos/streamercatalog/model/CmlpMessageRouterDetails.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Check team guidance re use of \"Cmlp\"",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e484351_7075f4ee",
+        "filename": "streamer-catalog-service/src/main/java/org/acumos/streamercatalog/model/ErrorModel.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Pls remove all @author",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6f66f62d_46c2e3fc",
+        "filename": "streamer-catalog-service/src/main/java/org/acumos/streamercatalog/service/CatalogService.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Pls remove @author",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4f578c96_f22746b4",
+        "filename": "streamer-catalog-service/src/main/java/org/acumos/streamercatalog/service/CatalogService.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Interface classes should document all parameters",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5063868a_ad26e1c5",
+        "filename": "streamer-catalog-service/src/main/java/org/acumos/streamercatalog/service/CatalogServiceImpl.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "This is a strange choice, rewriting all https to http?",
+      "range": {
+        "startLine": 141,
+        "startChar": 44,
+        "endLine": 141,
+        "endChar": 49
+      },
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a20de5d3_afbd9261",
+        "filename": "streamer-catalog-service/src/main/java/org/acumos/streamercatalog/service/CatalogServiceImpl.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Why is this hardcoded?  And I\u0027m pretty sure it\u0027s wrong, that the correct value is dmaap.  Move strings to be constant fields somewhere.",
+      "range": {
+        "startLine": 151,
+        "startChar": 49,
+        "endLine": 151,
+        "endChar": 54
+      },
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "034f5c02_1e3c76be",
+        "filename": "streamer-catalog-service/src/main/java/org/acumos/streamercatalog/service/CatalogServiceImpl.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "All these hardcoded constants should also be moved to constant fields",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4fab09c3_e33e8371",
+        "filename": "streamer-catalog-service/src/main/resources/application.properties",
+        "patchSetId": 11
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Suggest you use this best practice: rename this file to application.properties.template and .gitignore the application.properties file. That way every developer has their own copy with lots of passwords etc. and it never ever gets committed by accident.",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6c9d56d5_3148727a",
+        "filename": "streamer-service/README.md",
+        "patchSetId": 11
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Is this true??",
+      "range": {
+        "startLine": 4,
+        "startChar": 43,
+        "endLine": 5,
+        "endChar": 58
+      },
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "64bcb68b_59950401",
+        "filename": "streamer-service/pom.xml",
+        "patchSetId": 11
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Pls use 1.5.16.RELEASE",
+      "range": {
+        "startLine": 24,
+        "startChar": 16,
+        "endLine": 24,
+        "endChar": 17
+      },
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8a101473_9a6a52a4",
+        "filename": "streamer-service/pom.xml",
+        "patchSetId": 11
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Remove don\u0027t comment out",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "55a368d8_dae738bc",
+        "filename": "streamer-service/pom.xml",
+        "patchSetId": 11
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Suggest 2.7.0",
+      "range": {
+        "startLine": 106,
+        "startChar": 12,
+        "endLine": 106,
+        "endChar": 17
+      },
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "25aedbef_3a041de0",
+        "filename": "streamer-service/pom.xml",
+        "patchSetId": 11
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Does this component send email?  If not, can all these mail libraries be dropped?",
+      "range": {
+        "startLine": 174,
+        "startChar": 16,
+        "endLine": 174,
+        "endChar": 23
+      },
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "102a62ca_39ad9108",
+        "filename": "streamer-service/pom.xml",
+        "patchSetId": 11
+      },
+      "lineNbr": 294,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Why would you build a jar with only classes here?",
+      "range": {
+        "startLine": 294,
+        "startChar": 14,
+        "endLine": 294,
+        "endChar": 18
+      },
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "157c19e1_987c968f",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/DataStreamerApplication.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Do you need a TaskExecutor?",
+      "range": {
+        "startLine": 84,
+        "startChar": 8,
+        "endLine": 84,
+        "endChar": 20
+      },
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ce62091_6aeee089",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/SchdulerJob.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Typo.",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ec09b5d_d33127b4",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/SchdulerJob.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Typo Schedule",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5bdd2036_8b2865bd",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/SchdulerJob.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Don\u0027t use system.out; use logger",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f4df36ed_18b95378",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/common/HelperTool.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Remove @author",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "189bb0c1_46a7af53",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/common/HelperTool.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Same as in the  other project?  Suggest you factor common classes into a library, a separate subproject to save duplication and maintenance effort.",
+      "range": {
+        "startLine": 61,
+        "startChar": 13,
+        "endLine": 61,
+        "endChar": 23
+      },
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4c7b2f2e_2ef722fc",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/common/LogMessages.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Where is this resource bundle?  I don\u0027t see any file like \"logmessages\" in this gerrit change set",
+      "range": {
+        "startLine": 32,
+        "startChar": 41,
+        "endLine": 32,
+        "endChar": 52
+      },
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6c2e8a0c_34c77f2d",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/config/SwaggerConfiguration.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Suggest upgrading to avoid the deprecation warning here, you just have to add one more parameter, a call to a constructor\n\t\t\t\t\nnew ArrayList\u003cVendorExtension\u003e()); // vendor extensions",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1606f15a_6492b15e",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/controller/RestConsumerController.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "I believe the guidance is to avoid \"CMLP\"",
+      "range": {
+        "startLine": 47,
+        "startChar": 14,
+        "endLine": 47,
+        "endChar": 18
+      },
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "892d4d39_2ec1968e",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/controller/RestConsumerController.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "There appears to be no fixed path here - this grabs all components below the server context path - be careful because I think this breaks Swagger.",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ec7d0d2f_c26a77e5",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/controller/RestConsumerService.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Pls drop @author",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "98329a62_53a6d086",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/controller/RestConsumerService.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Interfaces should document parameters",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f01865a9_c98ddad8",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/exception/CmlpDataSrcException.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Pls remove @author",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c5673a85_05c9a4b0",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/exception/CmlpDataSrcException.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Think that \"Cmlp\" char sequence is being avoided",
+      "range": {
+        "startLine": 33,
+        "startChar": 13,
+        "endLine": 33,
+        "endChar": 33
+      },
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "578107db_9f634d8e",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/service/ConsumerImpl.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Hardcoding a password, even a dummy password, in Java code will trigger Sonar warnings and cause other problems, please reconsider.",
+      "range": {
+        "startLine": 42,
+        "startChar": 28,
+        "endLine": 42,
+        "endChar": 38
+      },
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fc2c5389_4211d757",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/service/ConsumerImpl.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Remove, don\u0027t comment out unused code",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bc5e62cb_5a5654e5",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/service/ConsumerService.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Please document the interface contract",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c87dc651_d2e13060",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/service/ConsumerServiceImpl.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Remove @author",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0204097e_1bd5bb36",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/service/ConsumerServiceImpl.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Don\u0027t log e.getMessage, log the exception:\n\n    log.error(\"Failed\", e);\n\nSame comment applies to methods below.",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "479726df_04f035f7",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/service/ConsumerServiceImpl.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Never use printStackTrace",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4751b710_84e041cb",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/service/MessageRouterTask.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 184,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Hardcoding AT\u0026T-specific HTTP headers looks like a practice that will cause many problems down the road.",
+      "range": {
+        "startLine": 184,
+        "startChar": 44,
+        "endLine": 184,
+        "endChar": 56
+      },
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bf90dd69_f5c58161",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/service/MessageRouterTask.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 248,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Never put AT\u0026T host names into source code",
+      "range": {
+        "startLine": 248,
+        "startChar": 14,
+        "endLine": 248,
+        "endChar": 39
+      },
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "085be7fa_beb5182d",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/service/MessageRouterTask.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 324,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Don\u0027t log the exception\u0027s message, just log the exception:\n\n    log.error(\"Failed\", e);",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b669b2eb_ab204848",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/service/PublisherImpl.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "This reader should be closed in a finally block, or even better, use the try() construct that auto-closes.",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "160bdf34_56286a54",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/service/PublisherImpl.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Discarding exceptions without reporting to logger is a practice that should be avoided",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a50454a3_863aaf74",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/service/PublisherImpl.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "See above re closing stream.",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "90bb42cf_6df1489e",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/service/PublisherImpl.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 303,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Don\u0027t use System.err nor stacktrace, use the logger.",
+      "range": {
+        "startLine": 303,
+        "startChar": 0,
+        "endLine": 303,
+        "endChar": 65
+      },
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2f350803_0a883e60",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/service/PublisherService.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Remove @author",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1beff9b1_4ca0c249",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/service/PublisherService.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Interface classes should document parameters",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "caa7e9e6_4c0a308c",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/service/PublisherServiceImpl.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Hardcoding an AT\u0026T-specific data routerheader might not be the best long-term strategy",
+      "range": {
+        "startLine": 68,
+        "startChar": 27,
+        "endLine": 68,
+        "endChar": 39
+      },
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "82d60c85_458fdd4e",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/service/PublisherServiceImpl.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "See above about AT\u0026T headers",
+      "range": {
+        "startLine": 125,
+        "startChar": 34,
+        "endLine": 125,
+        "endChar": 37
+      },
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0615ad24_f438b52a",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/service/PublisherServiceImpl.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Repeatedly hardcoding the same strings is a practice that should be avoided",
+      "range": {
+        "startLine": 139,
+        "startChar": 30,
+        "endLine": 139,
+        "endChar": 33
+      },
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f9a3a4bc_0fdfc3d7",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/service/PublisherServiceImpl.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 171,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Another AT\u0026T header? X-ATT-DR-PUBLISH-ID",
+      "range": {
+        "startLine": 171,
+        "startChar": 32,
+        "endLine": 171,
+        "endChar": 38
+      },
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c09285e5_ff9bb82f",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/service/PublisherServiceImpl.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 178,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Do not use system.err nor printStackTrace, use logger:\n\n   log.error(\"methodName failed\", e);",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1ebced8b_4aff1c45",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/service/PublisherServiceImpl.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 185,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Discard the input to System.out??",
+      "range": {
+        "startLine": 185,
+        "startChar": 12,
+        "endLine": 185,
+        "endChar": 15
+      },
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2fdb56eb_31e52d65",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/service/PublisherServiceImpl.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 192,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "See above re using logger to report exceptions",
+      "range": {
+        "startLine": 191,
+        "startChar": 0,
+        "endLine": 192,
+        "endChar": 23
+      },
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a3d479ab_a04ab188",
+        "filename": "streamer-service/src/main/resources/application.properties",
+        "patchSetId": 11
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-18T17:27:22Z",
+      "side": 1,
+      "message": "Suggest you use this best practice: rename this file to application.properties.template and .gitignore the application.properties file. That way every developer has their own copy with lots of passwords etc. and it never ever gets committed by accident.",
+      "revId": "3cff71d7bfd4605e0967827bef4f28c63de378b2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
