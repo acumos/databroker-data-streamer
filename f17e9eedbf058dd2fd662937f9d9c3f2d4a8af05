@@ -1,0 +1,472 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c7363e33_8f73905c",
+        "filename": "README.md",
+        "patchSetId": 16
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-24T18:32:47Z",
+      "side": 1,
+      "message": "Catalog AND Streamer service*s*, right?",
+      "revId": "f17e9eedbf058dd2fd662937f9d9c3f2d4a8af05",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0f95c975_92fd72b7",
+        "filename": "docs/database_install.rst",
+        "patchSetId": 16
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-24T18:32:47Z",
+      "side": 1,
+      "message": "I was too brief in my comment, I should have been more clear.  Please put a meaningful header here, maybe \"Data Streamer Installation\" or \"Mongo DB installation\".",
+      "range": {
+        "startLine": 20,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 4
+      },
+      "revId": "f17e9eedbf058dd2fd662937f9d9c3f2d4a8af05",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "df384c02_52c13c4c",
+        "filename": "docs/index.rst",
+        "patchSetId": 16
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-24T18:32:47Z",
+      "side": 1,
+      "message": "are you going to pull in the database install rst file?",
+      "revId": "f17e9eedbf058dd2fd662937f9d9c3f2d4a8af05",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "796dd926_5adc02c1",
+        "filename": "docs/overview.rst",
+        "patchSetId": 16
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-24T18:32:47Z",
+      "side": 1,
+      "message": "Has a JJB change been submitted to ci-management via Gerrit? If you need help with that please speak up.",
+      "revId": "f17e9eedbf058dd2fd662937f9d9c3f2d4a8af05",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b71d94c4_d185354d",
+        "filename": "streamer-catalog-service/pom.xml",
+        "patchSetId": 16
+      },
+      "lineNbr": 297,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-24T18:32:47Z",
+      "side": 1,
+      "message": "I really don\u0027t think you want this classes-only jar.  That\u0027s something the portal-marketplace has to do, but this project probably does not.  I can explain if you\u0027re not sure what this does.",
+      "revId": "f17e9eedbf058dd2fd662937f9d9c3f2d4a8af05",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "56e5a14c_7552ad3c",
+        "filename": "streamer-catalog-service/src/main/java/org/acumos/streamercatalog/config/SwaggerConfiguration.java",
+        "patchSetId": 16
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-24T18:32:47Z",
+      "side": 1,
+      "message": "Thanks for adjusting.  After I commented I learned from your colleagues even a better way:\n\n\tprivate ApiInfo apiInfo() {\n\t\tfinal String version \u003d CdsApplication.class.getPackage().getImplementationVersion();\n\t\treturn new ApiInfoBuilder() //\n\t\t\t\t.title(\"Acumos Common Data Service REST API\") //\n\t\t\t\t.description(\"Provides create, retrieve, update and delete (CRUD) services for \" //\n\t\t\t\t\t\t+ \" Acumos data including solutions, artifacts and users. \"//\n\t\t\t\t\t\t+ \" All service endpoints require basic HTTP authentication.\")\n\t\t\t\t.termsOfServiceUrl(\"Terms of service\") //\n\t\t\t\t.contact(new Contact(\"Acumos Dev Team\", //\n\t\t\t\t\t\t\"http://acumos.readthedocs.io/en/latest/submodules/common-dataservice/docs/\", //\n\t\t\t\t\t\t\"noreply@acumos.org\")) //\n\t\t\t\t.license(\"Apache 2.0 License\").licenseUrl(\"http://www.apache.org/licenses/LICENSE-2.0\") //\n\t\t\t\t.version(version \u003d\u003d null ? \"version not available\" : version) //\n\t\t\t\t.build();\n\t}",
+      "revId": "f17e9eedbf058dd2fd662937f9d9c3f2d4a8af05",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a53c6321_c46c043d",
+        "filename": "streamer-catalog-service/src/main/java/org/acumos/streamercatalog/controller/RestCatalogController.java",
+        "patchSetId": 16
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-24T18:32:47Z",
+      "side": 1,
+      "message": "I don\u0027t think you should remove all logging statements.  I was only trying to say, don\u0027t work so hard/don\u0027t repeat the class name in the string you\u0027re logging.  Every logger output will include the class name, but never the method name.",
+      "revId": "f17e9eedbf058dd2fd662937f9d9c3f2d4a8af05",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9fcdb8e7_cec2ca25",
+        "filename": "streamer-catalog-service/src/main/java/org/acumos/streamercatalog/controller/RestCatalogService.java",
+        "patchSetId": 16
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-24T18:32:47Z",
+      "side": 1,
+      "message": "Thank you for adding basic javadoc.  The LF builder will insist on a description for every parameter.  So this will fail once a real Verify job is in place.",
+      "revId": "f17e9eedbf058dd2fd662937f9d9c3f2d4a8af05",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fbac6669_3d5fe789",
+        "filename": "streamer-catalog-service/src/main/java/org/acumos/streamercatalog/controller/RestCatalogServiceImpl.java",
+        "patchSetId": 16
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-24T18:32:47Z",
+      "side": 1,
+      "message": "The right way to log exceptions with SLF4J:\n\n    log.error(\"methodName failed\", e);\n\nRemember the class name will be included automatically, no need to repeat.  Do not use e.getMessage().  In the case of null pointer exception that just sends the string \"null\" which is singularly unhelpful.",
+      "revId": "f17e9eedbf058dd2fd662937f9d9c3f2d4a8af05",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "41b9041d_791c8854",
+        "filename": "streamer-catalog-service/src/main/java/org/acumos/streamercatalog/service/CatalogService.java",
+        "patchSetId": 16
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-24T18:32:47Z",
+      "side": 1,
+      "message": "Please add descriptions.",
+      "revId": "f17e9eedbf058dd2fd662937f9d9c3f2d4a8af05",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ae8f1b0_4a86ea91",
+        "filename": "streamer-service/pom.xml",
+        "patchSetId": 16
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-24T18:32:47Z",
+      "side": 1,
+      "message": "Be consistent with springfox versions, define a property above and use it",
+      "range": {
+        "startLine": 106,
+        "startChar": 14,
+        "endLine": 106,
+        "endChar": 17
+      },
+      "revId": "f17e9eedbf058dd2fd662937f9d9c3f2d4a8af05",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ec4cd6bb_dc7b9cfe",
+        "filename": "streamer-service/pom.xml",
+        "patchSetId": 16
+      },
+      "lineNbr": 296,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-24T18:32:47Z",
+      "side": 1,
+      "message": "Again I doubt you really want a jar-with-only-classes here.  This is a leftover from Portal.",
+      "range": {
+        "startLine": 296,
+        "startChar": 19,
+        "endLine": 296,
+        "endChar": 26
+      },
+      "revId": "f17e9eedbf058dd2fd662937f9d9c3f2d4a8af05",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1eef220c_69e607da",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/common/DataStreamerUtil.java",
+        "patchSetId": 16
+      },
+      "lineNbr": 236,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-24T18:32:47Z",
+      "side": 1,
+      "message": "Don\u0027t call system.out, use a logger.  And this probably should be done at level debug, the response might be very large.  And what if the response has data within it that should not be logged?",
+      "range": {
+        "startLine": 236,
+        "startChar": 9,
+        "endLine": 236,
+        "endChar": 12
+      },
+      "revId": "f17e9eedbf058dd2fd662937f9d9c3f2d4a8af05",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "17486634_715339ec",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/common/LogMessages.java",
+        "patchSetId": 16
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-24T18:32:47Z",
+      "side": 1,
+      "message": "Where is the message bundle \"logmessages\"?  I don\u0027t see the file",
+      "range": {
+        "startLine": 34,
+        "startChar": 22,
+        "endLine": 34,
+        "endChar": 39
+      },
+      "revId": "f17e9eedbf058dd2fd662937f9d9c3f2d4a8af05",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f2dc2dfd_945eb6b5",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/config/SwaggerConfiguration.java",
+        "patchSetId": 16
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-24T18:32:47Z",
+      "side": 1,
+      "message": "One of the CMLP projects taught me this even better way, use a builder; please don\u0027t use my string values :)\n\n\tprivate ApiInfo apiInfo() {\n\t\tfinal String version \u003d CdsApplication.class.getPackage().getImplementationVersion();\n\t\treturn new ApiInfoBuilder() //\n\t\t\t\t.title(\"Acumos Common Data Service REST API\") //\n\t\t\t\t.description(\"Provides create, retrieve, update and delete (CRUD) services for \" //\n\t\t\t\t\t\t+ \" Acumos data including solutions, artifacts and users. \"//\n\t\t\t\t\t\t+ \" All service endpoints require basic HTTP authentication.\")\n\t\t\t\t.termsOfServiceUrl(\"Terms of service\") //\n\t\t\t\t.contact(new Contact(\"Acumos Dev Team\", //\n\t\t\t\t\t\t\"http://acumos.readthedocs.io/en/latest/submodules/common-dataservice/docs/\", //\n\t\t\t\t\t\t\"noreply@acumos.org\")) //\n\t\t\t\t.license(\"Apache 2.0 License\").licenseUrl(\"http://www.apache.org/licenses/LICENSE-2.0\") //\n\t\t\t\t.version(version \u003d\u003d null ? \"version not available\" : version) //\n\t\t\t\t.build();\n\t}",
+      "revId": "f17e9eedbf058dd2fd662937f9d9c3f2d4a8af05",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "58c485fe_bd33dd13",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/controller/RestConsumerController.java",
+        "patchSetId": 16
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-24T18:32:47Z",
+      "side": 1,
+      "message": "This seems to map onto the very very root element.  I can explain why this will cause trouble, starting with breaking Swagger API docs.",
+      "range": {
+        "startLine": 79,
+        "startChar": 27,
+        "endLine": 79,
+        "endChar": 37
+      },
+      "revId": "f17e9eedbf058dd2fd662937f9d9c3f2d4a8af05",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dbf33e51_d0a771b3",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/controller/RestConsumerService.java",
+        "patchSetId": 16
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-24T18:32:47Z",
+      "side": 1,
+      "message": "Please add descriptions",
+      "revId": "f17e9eedbf058dd2fd662937f9d9c3f2d4a8af05",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4adc4baa_a390295a",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/service/ConsumerImpl.java",
+        "patchSetId": 16
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-24T18:32:47Z",
+      "side": 1,
+      "message": "This will be flagged REPEATEDLY by code-scan tools.  Can you POSSIBLY remove it?  It will only help your team.",
+      "range": {
+        "startLine": 48,
+        "startChar": 28,
+        "endLine": 48,
+        "endChar": 36
+      },
+      "revId": "f17e9eedbf058dd2fd662937f9d9c3f2d4a8af05",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7bccc2ad_1c652e26",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/service/MessageRouterTask.java",
+        "patchSetId": 16
+      },
+      "lineNbr": 220,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-24T18:32:47Z",
+      "side": 1,
+      "message": "Do we really want to use the ATT letters in a field name?  If it\u0027s not essential, I recommend avoiding.",
+      "range": {
+        "startLine": 220,
+        "startChar": 43,
+        "endLine": 220,
+        "endChar": 56
+      },
+      "revId": "f17e9eedbf058dd2fd662937f9d9c3f2d4a8af05",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e37ebe3d_f920de8c",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/service/MessageRouterTask.java",
+        "patchSetId": 16
+      },
+      "lineNbr": 358,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-24T18:32:47Z",
+      "side": 1,
+      "message": "Log the exception:\n\n    log.error(\"MsgRtrTsk error\", e);",
+      "revId": "f17e9eedbf058dd2fd662937f9d9c3f2d4a8af05",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b262fa25_6a21e19d",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/service/PublisherImpl.java",
+        "patchSetId": 16
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-24T18:32:47Z",
+      "side": 1,
+      "message": "Log exceptions like this:\n\n    log.error(\"methodFailed\", e);\n\nAvoid e.getMessage() if at all possible.",
+      "revId": "f17e9eedbf058dd2fd662937f9d9c3f2d4a8af05",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "10e358ed_0b2ee90c",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/service/PublisherServiceImpl.java",
+        "patchSetId": 16
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-24T18:32:47Z",
+      "side": 1,
+      "message": "Hardcoding an AT\u0026T-specific data routerheader does not seem like a solid long-term strategy.  Does every open-source user have to use this header?",
+      "range": {
+        "startLine": 80,
+        "startChar": 27,
+        "endLine": 80,
+        "endChar": 40
+      },
+      "revId": "f17e9eedbf058dd2fd662937f9d9c3f2d4a8af05",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bb63b1c1_c2bdef04",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/service/PublisherServiceImpl.java",
+        "patchSetId": 16
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-24T18:32:47Z",
+      "side": 1,
+      "message": "See above",
+      "range": {
+        "startLine": 151,
+        "startChar": 33,
+        "endLine": 151,
+        "endChar": 34
+      },
+      "revId": "f17e9eedbf058dd2fd662937f9d9c3f2d4a8af05",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c656bd70_67550d0f",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/service/PublisherServiceImpl.java",
+        "patchSetId": 16
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-24T18:32:47Z",
+      "side": 1,
+      "message": "Discarding exceptions tends to cause problems, the system silently fails.",
+      "revId": "f17e9eedbf058dd2fd662937f9d9c3f2d4a8af05",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
