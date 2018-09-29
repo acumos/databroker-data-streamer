@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "24a6ff06_e1679c33",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/service/ConsumerService.java",
+        "patchSetId": 17
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-29T10:27:05Z",
+      "side": 1,
+      "message": "fix typo?   receive",
+      "range": {
+        "startLine": 44,
+        "startChar": 15,
+        "endLine": 44,
+        "endChar": 26
+      },
+      "revId": "4363d7a13855ef85d0a1a5934859034a935af064",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e9c26b94_f3b98775",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/service/PublisherImpl.java",
+        "patchSetId": 17
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-29T10:27:05Z",
+      "side": 1,
+      "message": "pls remove +, pass the exception as the last parameter",
+      "range": {
+        "startLine": 92,
+        "startChar": 40,
+        "endLine": 92,
+        "endChar": 41
+      },
+      "revId": "4363d7a13855ef85d0a1a5934859034a935af064",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "85b4ec6e_ddad9e10",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/service/PublisherServiceImpl.java",
+        "patchSetId": 17
+      },
+      "lineNbr": 196,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-29T10:27:05Z",
+      "side": 1,
+      "message": "Remove +, pass exception as last parameter",
+      "range": {
+        "startLine": 196,
+        "startChar": 33,
+        "endLine": 196,
+        "endChar": 34
+      },
+      "revId": "4363d7a13855ef85d0a1a5934859034a935af064",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
