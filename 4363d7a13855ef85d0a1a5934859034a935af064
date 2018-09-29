@@ -2,6 +2,144 @@
   "comments": [
     {
       "key": {
+        "uuid": "30b1b8cd_3114520c",
+        "filename": "streamer-catalog-service/pom.xml",
+        "patchSetId": 17
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-29T10:36:35Z",
+      "side": 1,
+      "message": "Please make this different from the other project, probably this should be Catalog Service, a wordy version of the artifactId above.",
+      "range": {
+        "startLine": 19,
+        "startChar": 14,
+        "endLine": 19,
+        "endChar": 22
+      },
+      "revId": "4363d7a13855ef85d0a1a5934859034a935af064",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ecfa479_b69c040a",
+        "filename": "streamer-catalog-service/pom.xml",
+        "patchSetId": 17
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-29T10:36:35Z",
+      "side": 1,
+      "message": "Your code does not reference any classes from this jar, remove.  Probably need to triple-check the pom for other unnecessary dependencies.",
+      "range": {
+        "startLine": 49,
+        "startChar": 0,
+        "endLine": 49,
+        "endChar": 47
+      },
+      "revId": "4363d7a13855ef85d0a1a5934859034a935af064",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b0726b1f_38ed60e7",
+        "filename": "streamer-catalog-service/pom.xml",
+        "patchSetId": 17
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-29T10:36:35Z",
+      "side": 1,
+      "message": "Your code doesn\u0027t use EELF, can drop this jar",
+      "range": {
+        "startLine": 118,
+        "startChar": 16,
+        "endLine": 118,
+        "endChar": 19
+      },
+      "revId": "4363d7a13855ef85d0a1a5934859034a935af064",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1c62df28_ae88ee85",
+        "filename": "streamer-catalog-service/pom.xml",
+        "patchSetId": 17
+      },
+      "lineNbr": 178,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-29T10:36:35Z",
+      "side": 1,
+      "message": "Your code doesn\u0027t send email, can drop this jar",
+      "range": {
+        "startLine": 178,
+        "startChar": 16,
+        "endLine": 178,
+        "endChar": 23
+      },
+      "revId": "4363d7a13855ef85d0a1a5934859034a935af064",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "30471378_41f4ee13",
+        "filename": "streamer-catalog-service/pom.xml",
+        "patchSetId": 17
+      },
+      "lineNbr": 202,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-29T10:36:35Z",
+      "side": 1,
+      "message": "Your code doesn\u0027t impor",
+      "range": {
+        "startLine": 202,
+        "startChar": 15,
+        "endLine": 202,
+        "endChar": 19
+      },
+      "revId": "4363d7a13855ef85d0a1a5934859034a935af064",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b2343041_7a15bca9",
+        "filename": "streamer-service/pom.xml",
+        "patchSetId": 17
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-29T10:36:35Z",
+      "side": 1,
+      "message": "This line is identical to the other pom, confusing",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 44
+      },
+      "revId": "4363d7a13855ef85d0a1a5934859034a935af064",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "24a6ff06_e1679c33",
         "filename": "streamer-service/src/main/java/org/acumos/streamer/service/ConsumerService.java",
         "patchSetId": 17
