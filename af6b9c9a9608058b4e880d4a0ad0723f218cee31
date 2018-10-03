@@ -1,0 +1,90 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f8696871_6ab2bdcd",
+        "filename": "streamer-catalog-service/README.md",
+        "patchSetId": 18
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-10-03T17:19:49Z",
+      "side": 1,
+      "message": "Please check/drop this sentence.",
+      "range": {
+        "startLine": 4,
+        "startChar": 43,
+        "endLine": 5,
+        "endChar": 58
+      },
+      "revId": "af6b9c9a9608058b4e880d4a0ad0723f218cee31",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c54e4dcf_d31970ef",
+        "filename": "streamer-service/README.md",
+        "patchSetId": 18
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-10-03T17:19:49Z",
+      "side": 1,
+      "message": "Insert space please",
+      "revId": "af6b9c9a9608058b4e880d4a0ad0723f218cee31",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d1a81b58_b0f5ae97",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/DataStreamerApplication.java",
+        "patchSetId": 18
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-10-03T17:19:49Z",
+      "side": 1,
+      "message": "Do you have a taskExecutor to perform operations on a regular basis?  I suspect this is not needed.",
+      "range": {
+        "startLine": 84,
+        "startChar": 0,
+        "endLine": 84,
+        "endChar": 37
+      },
+      "revId": "af6b9c9a9608058b4e880d4a0ad0723f218cee31",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f59912d6_5291bf6c",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/service/PublisherServiceImpl.java",
+        "patchSetId": 18
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-10-03T17:19:49Z",
+      "side": 1,
+      "message": "I\u0027m still concerned about all these HTTP headers with \"ATT\" in them.",
+      "range": {
+        "startLine": 42,
+        "startChar": 52,
+        "endLine": 42,
+        "endChar": 71
+      },
+      "revId": "af6b9c9a9608058b4e880d4a0ad0723f218cee31",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
