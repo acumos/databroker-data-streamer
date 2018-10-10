@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b14cf600_ccff62a9",
+        "filename": "streamer-restproxy-service/pom.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 275,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-10-10T17:58:51Z",
+      "side": 1,
+      "message": "dependencyManagement section is for publishing info to child projects, but I see no child projects so I think this is not what you really wanted to do here",
+      "range": {
+        "startLine": 267,
+        "startChar": 0,
+        "endLine": 275,
+        "endChar": 24
+      },
+      "revId": "8b59acf5ceef51c8a024f8eff4ad5fd6200e313e",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
