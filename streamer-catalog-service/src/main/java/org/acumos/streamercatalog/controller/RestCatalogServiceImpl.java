@@ -23,6 +23,7 @@ import java.util.ArrayList;
 
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.acumos.streamercatalog.common.DataStreamerCatalogUtil;
@@ -48,18 +49,24 @@ public class RestCatalogServiceImpl implements RestCatalogService {
 
 	@Autowired
 	private HttpServletRequest request;
+	
+	@Autowired
+	Environment env;
+	
+	@Autowired
+	DataStreamerCatalogUtil dataStreamerCatalogUtil;
 
 	@SuppressWarnings("unchecked")
 	@Override
 	public ResponseEntity saveCatalog(String authorization, CatalogObject objCatalog) {
 		ResponseMessage aResponseMessage = new ResponseMessage();
 
-		String user = DataStreamerCatalogUtil.getRemoteUser(request);
+		String user = dataStreamerCatalogUtil.getRemoteUser(request);
 		log.info("RestCatalogServiceImpl::saveCatalog::the request has been itiated by user: " + user);
 		
 		try {
 			
-			DataStreamerCatalogUtil.validateRequest(user, objCatalog);
+			dataStreamerCatalogUtil.validateRequest(user, objCatalog);
 			
 		} catch (Exception e) {
 			aResponseMessage.setCode(400);
@@ -77,8 +84,8 @@ public class RestCatalogServiceImpl implements RestCatalogService {
 				return new ResponseEntity(resp,HttpStatus.CREATED);
 			}
 			
-			String subscriberUrl = DataStreamerCatalogUtil.getEnv("streamer_base_url",
-					DataStreamerCatalogUtil.getComponentPropertyValue("streamer_base_url")) + catalogKey;
+			String subscriberUrl = dataStreamerCatalogUtil.getEnv("streamer_base_url",
+					dataStreamerCatalogUtil.getComponentPropertyValue("streamer_base_url")) + catalogKey;
 			log.info("RestCatalogServiceImpl::saveCatalog()::generated subscriber URL is: " + subscriberUrl);
 			String res="{\"subscriberUrl\":\"" + subscriberUrl+ "\",\"catalogKey\":\""+  objCatalog.getCatalogKey()+"\"}";
 			return new ResponseEntity(res,HttpStatus.CREATED);
@@ -97,7 +104,7 @@ public class RestCatalogServiceImpl implements RestCatalogService {
 			CatalogObject objCatalog) {
 		ResponseMessage aResponseMessage = new ResponseMessage();
 
-		String user = DataStreamerCatalogUtil.getRemoteUser(request);
+		String user = dataStreamerCatalogUtil.getRemoteUser(request);
 		log.info("RestCatalogServiceImpl::updateCatalog()::the request has been intiated by user: " + user);
 		
 		try {
@@ -151,7 +158,7 @@ public class RestCatalogServiceImpl implements RestCatalogService {
 	public ResponseEntity getCatalog(String authorization, String catalogKey, String mode) {
 		ResponseMessage aResponseMessage = new ResponseMessage();
 		
-		String user = DataStreamerCatalogUtil.getRemoteUser(request);
+		String user = dataStreamerCatalogUtil.getRemoteUser(request);
 		log.info("RestCatalogServiceImpl::getCatalog()::the request has been intiated by user: " + user);
 		try {
 			if (mode != null && !mode.isEmpty() && mode.equals("concise")){
@@ -180,7 +187,7 @@ public class RestCatalogServiceImpl implements RestCatalogService {
 	public ResponseEntity getCatalogs(String authorization, String category, String textSearch) {
 		ResponseMessage aResponseMessage = new ResponseMessage();
 		
-		String user = DataStreamerCatalogUtil.getRemoteUser(request);
+		String user = dataStreamerCatalogUtil.getRemoteUser(request);
 		log.info("RestCatalogServiceImpl::getCatalogs()::the request has been intiated by user " + user);
 		try {
 			log.info("RestCatalogServiceImpl::getCatalogs()::intiating request");
@@ -199,7 +206,7 @@ public class RestCatalogServiceImpl implements RestCatalogService {
 	public ResponseEntity deleteCatalog(String authorization, String catalogKey) {
 		ResponseMessage aResponseMessage = new ResponseMessage();
 		
-		String user = DataStreamerCatalogUtil.getRemoteUser(request);
+		String user = dataStreamerCatalogUtil.getRemoteUser(request);
 		log.info("RestCatalogServiceImpl::deleteCatalog()::the request has been intiated by user " + user);
 		try {
 			log.info("RestCatalogServiceImpl::deleteCatalog()::intiating request");

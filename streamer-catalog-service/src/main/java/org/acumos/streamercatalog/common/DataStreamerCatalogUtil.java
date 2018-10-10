@@ -41,6 +41,8 @@ import java.util.Properties;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.acumos.streamercatalog.exception.DataStreamerException;
+import org.acumos.streamercatalog.model.CatalogObject;
 import org.apache.cxf.jaxrs.ext.multipart.Attachment;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -49,8 +51,9 @@ import org.apache.http.impl.client.HttpClients;
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.acumos.streamercatalog.exception.DataStreamerException;
-import org.acumos.streamercatalog.model.CatalogObject;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
+import org.springframework.stereotype.Component;
 
 /**
  * <p>
@@ -58,6 +61,7 @@ import org.acumos.streamercatalog.model.CatalogObject;
  * </p>
  * 
  */
+@Component
 public class DataStreamerCatalogUtil {
 	private static final String TMP = ".tmp";
 	private static final String FILE_SEPARATOR = "file.separator";
@@ -83,10 +87,16 @@ public class DataStreamerCatalogUtil {
 	private static final String CONFIG_PROPERTIES_LOC = "/config.properties";
 	private static final String CONFIG_PROPERTIES = "config.properties";
 	
+	@Autowired
+	Environment env;
+	
+	public DataStreamerCatalogUtil() {
+		// TODO Auto-generated constructor stub
+	}
 
 	private static final Logger logger = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 
-	public static String getComponentPropertyValue(String key) throws IOException {
+	public String getComponentPropertyValue(String key) throws IOException {
 		Properties prop = new Properties();
 		InputStream input;
 		if (new File(System.getProperty(USER_DIR) + System.getProperty(FILE_SEPARATOR) + CONFIG_PROPERTIES)
@@ -96,13 +106,16 @@ public class DataStreamerCatalogUtil {
 		} else {
 			input = DataStreamerCatalogUtil.class.getResourceAsStream(CONFIG_PROPERTIES_LOC);
 		}
+		
+		if(input==null) return null;
+		
 		prop.load(input);
 		input.close();
 
 		return prop.getProperty(key);
 	}
 	
-	public static String getComponentPropertyValue(String key, String defaultValue) throws IOException {
+	public String getComponentPropertyValue(String key, String defaultValue) throws IOException {
 		Properties prop = new Properties();
 		InputStream input;
 		String value = null;
@@ -125,7 +138,7 @@ public class DataStreamerCatalogUtil {
 	}
 
 
-	public static boolean isPath(String text) {
+	public boolean isPath(String text) {
 
 		if (text == null) {
 			return false;
@@ -136,7 +149,7 @@ public class DataStreamerCatalogUtil {
 	}
 
 
-	public static boolean isFileExists(String text) throws IOException {
+	public boolean isFileExists(String text) throws IOException {
 
 		if (text == null) {
 			return false;
@@ -151,7 +164,7 @@ public class DataStreamerCatalogUtil {
 		return (inFile.exists());
 	}
 
-	public static boolean isFileUrl(String urlString) {
+	public boolean isFileUrl(String urlString) {
 		try {
 			new URL(urlString);
 			return true;
@@ -160,7 +173,7 @@ public class DataStreamerCatalogUtil {
 		}
 	}
 
-	public static String readHttpURLtoString(URL urlPath) throws IOException {
+	public String readHttpURLtoString(URL urlPath) throws IOException {
 		String outcome = null;
 		try (BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(urlPath.openStream()))) {
 			StringBuilder stringBuilder = new StringBuilder();
@@ -175,12 +188,12 @@ public class DataStreamerCatalogUtil {
 		return outcome;
 	}
 
-	public static String extractUsername(String userName) {
+	public String extractUsername(String userName) {
 		return (userName.indexOf(STR) > 0) ? userName.substring(0, userName.indexOf(STR)) : userName;
 
 	}
 
-	public static boolean isFileinHttp(URL urlPath) {
+	public boolean isFileinHttp(URL urlPath) {
 		try {
 			readHttpURLtoString(urlPath);
 		} catch (Exception e) {
@@ -189,7 +202,7 @@ public class DataStreamerCatalogUtil {
 		return true;
 	}
 
-	public static boolean isHTTPServerOnline(String ipAddress, int port) {
+	public boolean isHTTPServerOnline(String ipAddress, int port) {
 		boolean b = true;
 		try {
 			InetSocketAddress sa = new InetSocketAddress(ipAddress, port);
@@ -202,7 +215,7 @@ public class DataStreamerCatalogUtil {
 		return b;
 	}
 
-	public static String getRemoteUser(HttpServletRequest request) {
+	public String getRemoteUser(HttpServletRequest request) {
 		if (request.getRemoteUser() != null) {
 			return request.getRemoteUser();
 		}
@@ -221,25 +234,36 @@ public class DataStreamerCatalogUtil {
 		return null;
 	}
 
-	public static String getEnv(String envKey, String defaultValue) {
-		String value = System.getenv(envKey);
+	public String getEnv(String envKey, String defaultValue) {
+		
+		String value = null;
+		
+		if(value ==null && env != null) {
+			value = env.getProperty(envKey);
+		}
+		
+		if (value == null) {
+		 value = System.getenv(envKey);
+		}
+		 
 		if (value == null) {
 			value = System.getProperty(envKey);
 		}
+		
 		if (value == null) {
 			value = defaultValue;
 		}
 		return value;
 	}
 
-	private static void setEnv(String envKey, String value) {
+	private void setEnv(String envKey, String value) {
 		if (value != null) {
 			System.setProperty(envKey, value);
 		}
 	}
 
 
-	private static void removeDirectory(File directory) {
+	private void removeDirectory(File directory) {
 		if (directory.isDirectory()) {
 			File[] files = directory.listFiles();
 			if (files != null && files.length > 0) {
@@ -253,7 +277,7 @@ public class DataStreamerCatalogUtil {
 		}
 	}
 
-	private static void cleanDirectory(File directory) {
+	private void cleanDirectory(File directory) {
 		if (directory.isDirectory()) {
 			File[] files = directory.listFiles();
 			if (files != null && files.length > 0) {
@@ -265,7 +289,7 @@ public class DataStreamerCatalogUtil {
 		directory.delete();
 	}
 	
-	public static String readAttachedFileContents(Attachment attachment) {
+	public String readAttachedFileContents(Attachment attachment) {
 		String contents = null;
 		
 		FileInputStream fis = null;
@@ -307,13 +331,12 @@ public class DataStreamerCatalogUtil {
 		return contents;
 	}
 	
-	public static JSONObject getModelDetails (String authorization, String modelKey) throws IOException, DataStreamerException{
+	public JSONObject getModelDetails (String authorization, String modelKey) throws IOException, DataStreamerException{
 		
 		logger.info("HelperTool::getModelDetails()::prepping request to model manager to get predictorId using modelKey: " + modelKey);
 		HttpClient client = HttpClients.createDefault();
 		
-		String mmsUrl = DataStreamerCatalogUtil.getEnv(MMS_URL,
-				DataStreamerCatalogUtil.getComponentPropertyValue(MMS_URL)) + modelKey.replace("-", "_");
+		String mmsUrl = getEnv(MMS_URL, getComponentPropertyValue(MMS_URL)) + modelKey.replace("-", "_");
 		logger.info("HelperTool::getModelDetails()::the model manager url is " + mmsUrl );
 
 		HttpGet request = new HttpGet(mmsUrl);
@@ -352,13 +375,12 @@ public class DataStreamerCatalogUtil {
 		return new JSONObject(modelDetails.toString());
 	}
 	
-	public static JSONObject getPredictorDetails (String authorization, String predictorId) throws IOException, DataStreamerException{
+	public JSONObject getPredictorDetails (String authorization, String predictorId) throws IOException, DataStreamerException{
 		
 		logger.info("HelperTool::getPredictorDetails()::prepping request to predictor manager to get info on predictor: " + predictorId);
 		HttpClient client = HttpClients.createDefault();
 		
-		String pmsUrl = DataStreamerCatalogUtil.getEnv(PMS_URL,
-				DataStreamerCatalogUtil.getComponentPropertyValue(PMS_URL)) + predictorId.replace("-", "_");
+		String pmsUrl = getEnv(PMS_URL, getComponentPropertyValue(PMS_URL)) + predictorId.replace("-", "_");
 		logger.info("HelperTool::getPredictorDetails()::the predictor manager url is " + pmsUrl );
 
 		HttpGet request = new HttpGet(pmsUrl);
@@ -398,13 +420,12 @@ public class DataStreamerCatalogUtil {
 	}
 	
 	//TO DO:if this method required or not
-	public static JSONObject getPredictorUrl (String authorization, String predictorId) throws IOException, DataStreamerException{
+	public JSONObject getPredictorUrl (String authorization, String predictorId) throws IOException, DataStreamerException{
 		//String pmsUrl = HelperTool.getEnv("pms_url", HelperTool.getComponentPropertyValue("pms_url"));
 		
 		HttpClient client = HttpClients.createDefault();
 
-		HttpGet request = new HttpGet(DataStreamerCatalogUtil.getEnv(PMS_URL,
-				DataStreamerCatalogUtil.getComponentPropertyValue(PMS_URL)) + predictorId);
+		HttpGet request = new HttpGet(getEnv(PMS_URL, getComponentPropertyValue(PMS_URL)) + predictorId);
 		request.addHeader(AUTHORIZATION, authorization);
 
 		HttpResponse response = client.execute(request);
@@ -444,9 +465,9 @@ public class DataStreamerCatalogUtil {
 		return new JSONObject(predictorDetails.toString());
 	}
 	
-	public static String getkey(String user) throws IOException {
+	public String getkey(String user) throws IOException {
 		logger.info("HelperTool::getKey()::intiating generating key");
-		String namespace = DataStreamerCatalogUtil.getEnv(NAMESPACE, DataStreamerCatalogUtil.getComponentPropertyValue(NAMESPACE));
+		String namespace = getEnv(NAMESPACE, getComponentPropertyValue(NAMESPACE));
 		String name = namespace.replace(".", "_") + "_"
 				+ ((user.indexOf(STR) > 0) ? user.substring(0, user.indexOf(STR)).replaceAll("-", "_")
 						: user.replaceAll("-", "_"))
@@ -456,7 +477,7 @@ public class DataStreamerCatalogUtil {
 		return name;
 	}
 	
-	public static void validateRequest(String user, CatalogObject objCatalog) throws DataStreamerException, Exception {
+	public void validateRequest(String user, CatalogObject objCatalog) throws DataStreamerException, Exception {
 		
 		if (!(user != null)) {
 			throw new DataStreamerException(PLEASE_PROVIDE_A_VALID_CREDENTIALS, 400);
@@ -492,7 +513,7 @@ public class DataStreamerCatalogUtil {
 	}
 	
 	
-	public static String getEncrypt(String inStr) {
+	public String getEncrypt(String inStr) {
 		
 		try {
 			
@@ -504,7 +525,7 @@ public class DataStreamerCatalogUtil {
 	}
 	
 	
-	public static String getDecrypt(String inStr) {
+	public String getDecrypt(String inStr) {
 		try {
 			
 		} catch(Exception e) {
