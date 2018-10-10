@@ -22,7 +22,6 @@
 Datastreamer Service
 ====================
 
-
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
@@ -30,6 +29,9 @@ Datastreamer Service
    overview.rst
    release-notes.rst
    database_install.rst
-
+   streamer-catalog-service.rst
+   streamer-service.rst
+   streamer-restproxy-service.rst
+   
 * :ref:`search`
 

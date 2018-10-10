@@ -27,13 +27,15 @@ import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Service;
-
 import org.acumos.streamercatalog.common.DataStreamerCatalogUtil;
 import org.acumos.streamercatalog.exception.DataStreamerException;
 import org.acumos.streamercatalog.model.CatalogObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
+import org.springframework.stereotype.Component;
+
 import com.mongodb.BasicDBObject;
 import com.mongodb.BasicDBObjectBuilder;
 import com.mongodb.DB;
@@ -45,7 +47,7 @@ import com.mongodb.MongoCredential;
 import com.mongodb.ServerAddress;
 import com.mongodb.WriteResult;
 
-@Service
+@Component
 public class DbUtilities {
 
 	private static final String DETAIL = "detail";
@@ -133,6 +135,16 @@ public class DbUtilities {
 	private MongoClient mongoClient = null;
 	private DB datasrcDB = null;
 	private DBCollection datasrcCollection = null;
+	
+	@Autowired
+	Environment env;
+	
+	@Autowired
+	DataStreamerCatalogUtil dataStreamerCatalogUtil;
+	
+	
+	public DbUtilities() {
+	}
 
 	private DBCollection getMongoCollection() throws IOException {
 		log.info("DbUtilities::getMongoCollection()::trying to get a mongo client instance");
@@ -141,26 +153,26 @@ public class DbUtilities {
 			log.info(
 					"DbUtilities::getMongoCollection()::checking if mongo client is intialised or not, will intialise a copy of it if not intialised.");
 			MongoCredential mongoCredential = MongoCredential.createCredential(
-					DataStreamerCatalogUtil.getEnv(MONGO_USERNAME, DataStreamerCatalogUtil.getComponentPropertyValue(MONGO_USERNAME)),
-					DataStreamerCatalogUtil.getEnv(MONGO_DBNAME, DataStreamerCatalogUtil.getComponentPropertyValue(MONGO_DBNAME)),
-					DataStreamerCatalogUtil.getEnv(MONGO_PASSWORD, DataStreamerCatalogUtil.getComponentPropertyValue(MONGO_PASSWORD))
+					dataStreamerCatalogUtil.getEnv(MONGO_USERNAME, dataStreamerCatalogUtil.getComponentPropertyValue(MONGO_USERNAME)),
+					dataStreamerCatalogUtil.getEnv(MONGO_DBNAME, dataStreamerCatalogUtil.getComponentPropertyValue(MONGO_DBNAME)),
+					dataStreamerCatalogUtil.getEnv(MONGO_PASSWORD, dataStreamerCatalogUtil.getComponentPropertyValue(MONGO_PASSWORD))
 							.toCharArray());
 
 			ServerAddress server = new ServerAddress(
-					DataStreamerCatalogUtil.getEnv(MONGO_HOSTNAME, DataStreamerCatalogUtil.getComponentPropertyValue(MONGO_HOSTNAME)),
+					dataStreamerCatalogUtil.getEnv(MONGO_HOSTNAME, dataStreamerCatalogUtil.getComponentPropertyValue(MONGO_HOSTNAME)),
 					Integer.parseInt(
-							DataStreamerCatalogUtil.getEnv(MONGO_PORT, DataStreamerCatalogUtil.getComponentPropertyValue(MONGO_PORT))));
+							dataStreamerCatalogUtil.getEnv(MONGO_PORT, dataStreamerCatalogUtil.getComponentPropertyValue(MONGO_PORT))));
 			mongoClient = new MongoClient(server, Arrays.asList(mongoCredential));
 			log.info("DbUtilities::getMongoCollection():: a new mongo client has been intialised.");
 		}
 
 		log.info("DbUtilities::getMongoCollection()::using mongo client to get db connection.");
 		datasrcDB = mongoClient
-				.getDB(DataStreamerCatalogUtil.getEnv(MONGO_DBNAME, DataStreamerCatalogUtil.getComponentPropertyValue(MONGO_DBNAME)));
+				.getDB(dataStreamerCatalogUtil.getEnv(MONGO_DBNAME, dataStreamerCatalogUtil.getComponentPropertyValue(MONGO_DBNAME)));
 
 		log.info("DbUtilities::getMongoCollection()::using mongo client to get collection.");
-		datasrcCollection = datasrcDB.getCollection(DataStreamerCatalogUtil.getEnv("mongo_collection_name",
-				DataStreamerCatalogUtil.getComponentPropertyValue("mongo_collection_name")));
+		datasrcCollection = datasrcDB.getCollection(dataStreamerCatalogUtil.getEnv("mongo_collection_name",
+				dataStreamerCatalogUtil.getComponentPropertyValue("mongo_collection_name")));
 
 		log.info("DbUtilities::getMongoCollection()::returning  collection.");
 		return datasrcCollection;
@@ -212,7 +224,7 @@ public class DbUtilities {
 		catalogBuilder.append(POLLING_INTERVAL, objCatalog.getPollingInterval());
 
 		catalogBuilder.append(NAMESPACE,
-				DataStreamerCatalogUtil.getEnv(NAMESPACE, DataStreamerCatalogUtil.getComponentPropertyValue(NAMESPACE)));
+				dataStreamerCatalogUtil.getEnv(NAMESPACE, dataStreamerCatalogUtil.getComponentPropertyValue(NAMESPACE)));
 		
 		if (objCatalog.getCategory() != null) {
 			if (objCatalog.getCategory().equalsIgnoreCase(DMAAP))

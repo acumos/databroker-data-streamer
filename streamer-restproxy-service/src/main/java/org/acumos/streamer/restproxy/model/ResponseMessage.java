@@ -17,41 +17,50 @@
  * limitations under the License.
  * ===============LICENSE_END=========================================================
  */
+package org.acumos.streamer.restproxy.model;
 
-package org.acumos.streamer;
+import org.json.JSONObject;
 
-import java.lang.invoke.MethodHandles;
-
-import javax.annotation.PostConstruct;
-
-import org.acumos.streamer.service.MessageRouterTask;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.env.Environment;
-import org.springframework.core.task.TaskExecutor;
-import org.springframework.scheduling.annotation.Scheduled;
-import org.springframework.stereotype.Service;
-
-@Service
-public class SchedulerJob {
-
-	@Autowired
-	private TaskExecutor taskExecutor;
-	
-	@Autowired
-	Environment env;
-	
-	@Autowired
-	MessageRouterTask messageRouterTask;
-	
-	private static final Logger log = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
-	
-	@PostConstruct
-	@Scheduled(fixedDelay=600000)
-	public void runFixedSchdule() {
-		log.info("Schdule job invoked");
-		taskExecutor.execute(messageRouterTask);
-		log.info("Schdule job end");
+public class ResponseMessage {
+	private int code;
+	private String message;
+	private JSONObject data;
+	/**
+	 * @return the code
+	 */
+	public int getCode() {
+		return code;
 	}
+	/**
+	 * @param i the code to set
+	 */
+	public void setCode(int i) {
+		this.code = i;
+	}
+	/**
+	 * @return the message
+	 */
+	public String getMessage() {
+		return message;
+	}
+	/**
+	 * @param message the message to set
+	 */
+	public void setMessage(String message) {
+		this.message = message;
+	}
+	/**
+	 * @return the data
+	 */
+	public JSONObject getData() {
+		return data;
+	}
+	/**
+	 * @param data the data to set
+	 */
+	public void setData(JSONObject data) {
+		this.data = data;
+	}
+	
+
 }

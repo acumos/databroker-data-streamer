@@ -22,9 +22,8 @@ package org.acumos.streamer.service;
 
 import java.io.InputStream;
 
-import org.apache.cxf.jaxrs.ext.multipart.MultipartBody;
-
 import org.acumos.streamer.exception.DataStreamerException;
+import org.apache.cxf.jaxrs.ext.multipart.MultipartBody;
 
 public interface ConsumerService {
 	

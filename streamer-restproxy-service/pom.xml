@@ -13,10 +13,10 @@
 		language governing permissions and limitations under the License. ===============LICENSE_END========================================================= -->
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.acumos.databroker.data-streamer</groupId>
-	<artifactId>streamer-catalog-service</artifactId>
+	<artifactId>streamer-restproxy-service</artifactId>
 	<!-- This version number is used to tag the Docker image. -->
 	<version>1.0.0-SNAPSHOT</version>
-	<name>Acumos Streamer Catalog Service Server</name>
+	<name>Acumos Streamer RestProxy Service Server</name>
 	<description>Micro service based on Spring-Boot</description>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -28,36 +28,16 @@
 	<properties>
 		<encoding>UTF-8</encoding>
 		<!-- Stand-alone RESTFul application -->
-		<start-class>org.acumos.streamercatalog.DataStreamerCatalogApplication</start-class>
+		<start-class>org.acumos.streamer.restproxy.DataStreamerRestProxyApplication</start-class>
 		<!-- Jenkins invokes mvn with argument -Dbuild.number=${BUILD_NUMBER} -->
 		<build.number>0</build.number>
-		<springfox.version>2.7.0</springfox.version>
 		<!-- Not supplied to all jobs; e.g., Javadoc -->
 		<docker.pull.registry>nexus3.acumos.org:10001</docker.pull.registry>
+		<springfox.version>2.7.0</springfox.version>
 		<!-- Supplied by Jenkins -->
 		<docker.push.registry>${env.NEXUS3_PUSH_REGISTRY}</docker.push.registry>
 	</properties>
-	<!-- Some dependencies are specific to Acumos, but this POM defines no repositories 
-		section. The Jenkins server specifies Acumos repositories. Developers should 
-		ensure their ~/.m2/settings.xml file has the following URLs in both the repositories 
-		and pluginRepositories sections or in a profile: https://nexus.acumos.org/content/repositories/snapshots/ 
-		https://nexus.acumos.org/content/repositories/releases/ -->
-	<dependencies>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
-			<!-- Spring chooses <version>${slf4j.version}</version> -->
-		</dependency>
-		<dependency>
-			<groupId>ch.qos.logback</groupId>
-			<artifactId>logback-classic</artifactId>
-			<!-- Spring chooses <version>${logback.version}</version> -->
-		</dependency>
-		<dependency>
-			<groupId>ch.qos.logback</groupId>
-			<artifactId>logback-core</artifactId>
-			<!-- Spring chooses <version>${logback.version}</version> -->
-		</dependency>
+	<dependencies>  
 		<dependency>
 			<groupId>com.github.docker-java</groupId>
 			<artifactId>docker-java</artifactId>
@@ -91,76 +71,37 @@
 			<version>${springfox.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.mongodb</groupId>
-			<artifactId>mongo-java-driver</artifactId>
-		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/org.apache.cxf/cxf-bundle-jaxrs -->
-
-		<dependency> 
-		    <groupId>org.apache.cxf</groupId> 
-		   <artifactId>cxf-rt-frontend-jaxrs</artifactId>
-		   <version>3.1.9</version>		 
-		</dependency>
-		
-		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger-ui</artifactId>
 			<version>${springfox.version}</version>
 		</dependency>
-		<dependency>
+			<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
 			<!-- spring sets version -->
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-mobile</artifactId>
-			<!-- spring sets version -->
-		</dependency>
-		<dependency>
-			<groupId>javax.inject</groupId>
-			<artifactId>javax.inject</artifactId>
-			<version>1</version>
-		</dependency>
-		<dependency>
-			<groupId>io.jsonwebtoken</groupId>
-			<artifactId>jjwt</artifactId>
-			<version>0.6.0</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<!-- Spring sets the <version>4.11</version> -->
 			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-mail</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>it.ozimov</groupId>
-			<artifactId>spring-boot-email-core</artifactId>
-			<version>0.6.2</version>
-		</dependency>
-		
+		</dependency>		
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpmime</artifactId>
 			<!-- spring sets the <version>4.3.1</version> -->
 		</dependency>
-		<!-- AspectJ Dependencies -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-aop</artifactId>
-		</dependency>
 		
-		<!-- https://mvnrepository.com/artifact/org.json/json -->
+	<!-- https://mvnrepository.com/artifact/org.json/json -->
 		<dependency>
 		    <groupId>org.json</groupId>
 		    <artifactId>json</artifactId>
-		    <version>20180813</version>
-		</dependency>				
+		</dependency>
+			<dependency>
+			<groupId>org.apache.kafka</groupId>
+			<artifactId>kafka-clients</artifactId>
+			<version>0.11.0.1</version>
+		</dependency>	
 	</dependencies>
 	
 	<build>
@@ -269,7 +210,7 @@
                                           <pushRegistry>${docker.push.registry}</pushRegistry>
                                           <images>
                                                   <image>
-                                                          <name>streamer-catalog-service:${project.version}</name>
+                                                          <name>streamer-restproxy-service:${project.version}</name>
 															<build>
                                                                     <from>frolvlad/alpine-oraclejdk8:slim</from>
                                                                  <tags>

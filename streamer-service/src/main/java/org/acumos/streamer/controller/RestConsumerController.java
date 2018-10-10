@@ -21,6 +21,7 @@ package org.acumos.streamer.controller;
 
 import java.io.InputStream;
 import java.lang.invoke.MethodHandles;
+
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
@@ -84,9 +85,7 @@ public class RestConsumerController {
 			@RequestParam(FEED_AUTH) String feedAuthorization, @PathVariable(CATALOG_KEY) String catalogKey,
 			@PathVariable(FILE_NAME) String fileName,
 			@Multipart(value = FILE, type = APPLICATION_OCTET_STREAM) InputStream attachedFiles) {
-		
 		logger.debug("in operateData in RestConsumerCOntroller");
-		
 		return service.operateData(authorization, feedAuthorization, catalogKey, fileName, attachedFiles);
 	}
 

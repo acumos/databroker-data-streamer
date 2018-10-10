@@ -17,33 +17,15 @@
 .. ===============LICENSE_END=========================================================
 
 =============================
-Datastreamer Service Overview
+Datastreamer Service Developer Guide
 =============================
 
-The Acumos Datastreamer Service provides ways to store the datastreamer metadata plus to handle both datarouter and message router
-Datastreamer is divided into two mS i.e. streamer-catalog-service and streamer-service
-streamer-catalog-service is responsible to store the metadata about message router (eg Kafka) which is publisher/subscriber url and its credentials
 streamer-service is basically a background process which runs every 60 minutes and process configured message router via streamer-catalog-service
 streamer-service pulls the scoring data from message router, send it to configured predictor to score and publish the score result back to configured message router
-streamer-restproxy-service is for local development where we don't have real message router configured, this proxy url can be configured as publisher/subscriber into catalog
-streamer-restproxy-service user need to start local kafka message router on his local machine and point this service to the same kafka message router
-The server component is a Spring-Boot application that provides REST service to callers.
 
-The source is available from the Linux Foundation Gerrit server:
+**1: Running service**
+-----------------------------------------
 
-    https://gerrit.acumos.org/r/gitweb?p=databroker/data-streamer.git;a=summary
+in order to run streamer service, you will need to have catalog service up and running
 
-The CI/CD jobs are in the Linux Foundation Jenkins server:
-
-    https://jenkins.acumos.org/view/databroker-data-streamer/
-
-Issues are tracked in the Linux Foundation Jira server:
-
-    https://jira.acumos.org/secure/Dashboard.jspa
-
-Mongo DB Install document can be found at docs/database_install.rst
-
-Further information is available from the Linux Foundation Wiki:
-
-    https://wiki.acumos.org/
-
+change catalog_url_prefix=<catalog_url> in application.properties as streamer service talks to catalog service to pull metadata

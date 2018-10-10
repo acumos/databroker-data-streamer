@@ -27,14 +27,14 @@ import java.lang.invoke.MethodHandles;
 import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import org.acumos.streamer.common.DataStreamerUtil;
 import org.acumos.streamer.exception.DataStreamerException;
 import org.acumos.streamer.service.ConsumerService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 @Service
 public class RestConsumerServiceImpl implements RestConsumerService {
@@ -49,12 +49,15 @@ public class RestConsumerServiceImpl implements RestConsumerService {
 	@Autowired
 	private HttpServletRequest request;
 	
+	@Autowired
+	DataStreamerUtil dataStreamerUtil;
+	
 
 
 	@Override
 	public Response operateData(String authorization, String feedAuthorization, String catalogKey, String fileName,
 			InputStream attachedFiles) {
-		String user = DataStreamerUtil.getRemoteUser(request);
+		String user = dataStreamerUtil.getRemoteUser(request);
 		
 		try {
 			String response = aConsumerService.operateData(user, authorization, feedAuthorization, fileName, catalogKey, attachedFiles);

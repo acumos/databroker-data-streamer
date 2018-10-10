@@ -16,13 +16,13 @@
 .. limitations under the License.
 .. ===============LICENSE_END=========================================================
 
-==================================
-Datastreamer Service Release Notes
-==================================
+=============================
+Datastreamer Service Developer Guide
+=============================
 
-The service is deployed as a jar file to a Maven Nexus repository. The server is deployed as a Docker image to a Docker registry.
+streamer-catalog-service is responsible to store the metadata about message router (eg Kafka) which is publisher/subscriber url and its credentials
 
-Version 1.17.15, 11 Sep 2018
-----------------------------
+**1: Running service**
+-----------------------------------------
 
-* Added completd functionality of DataStreamer (ACUMOS-1182)
+in order to run catalog service, you will need to have mongoDB up and running, please make necessary changes into application.properties related to mongoDB

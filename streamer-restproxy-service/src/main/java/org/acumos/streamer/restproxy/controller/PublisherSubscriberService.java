@@ -17,41 +17,36 @@
  * limitations under the License.
  * ===============LICENSE_END=========================================================
  */
+package org.acumos.streamer.restproxy.controller;
 
-package org.acumos.streamer;
+import java.io.IOException;
+import org.springframework.http.ResponseEntity;
 
-import java.lang.invoke.MethodHandles;
-
-import javax.annotation.PostConstruct;
-
-import org.acumos.streamer.service.MessageRouterTask;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.env.Environment;
-import org.springframework.core.task.TaskExecutor;
-import org.springframework.scheduling.annotation.Scheduled;
-import org.springframework.stereotype.Service;
-
-@Service
-public class SchedulerJob {
-
-	@Autowired
-	private TaskExecutor taskExecutor;
+@SuppressWarnings("rawtypes")
+public interface PublisherSubscriberService {
 	
-	@Autowired
-	Environment env;
+	/**
+	 * Posts Messages to Kafka Topic.
+	 * @param authorization
+	 * 				basic authorization header value
+	 * @param topic
+	 * 				kafka topic where the messages have to be posted
+	 * @return ResponseEntity
+	 */
+	public ResponseEntity postMsgsToKafka(String authorization,String topic);
 	
-	@Autowired
-	MessageRouterTask messageRouterTask;
-	
-	private static final Logger log = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
-	
-	@PostConstruct
-	@Scheduled(fixedDelay=600000)
-	public void runFixedSchdule() {
-		log.info("Schdule job invoked");
-		taskExecutor.execute(messageRouterTask);
-		log.info("Schdule job end");
-	}
+	/**
+	 * Saves catalog object to the database.
+	 * @param authorization
+	 * 				basic authorization header value
+	 * @param topic
+	 * 				kafka topic where the messages have to be posted
+	 * @param groupName
+	 * 				kafka group name
+	 * @param groupId
+	 * 				kafka groupId
+	 * @return ResponseEntity
+	 */
+	public ResponseEntity getMsgsFromKafka(String authorization,String topic,String groupName, String groupId);
+
 }

@@ -17,31 +17,25 @@
  * limitations under the License.
  * ===============LICENSE_END=========================================================
  */
-
-package org.acumos.streamercatalog;
+package org.acumos.streamer.restproxy;
 
 import java.io.IOException;
 import java.lang.invoke.MethodHandles;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.env.ConfigurableEnvironment;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-/**
- * Launcher for the data-streamer catalog service Spring-Boot app.
- */
 @SpringBootApplication
-public class DataStreamerCatalogApplication implements ApplicationContextAware {
-
+public class DataStreamerRestProxyApplication {
+	
 	private static final Logger logger = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
-
+	
 	public static final String CONFIG_ENV_VAR_NAME = "SPRING_APPLICATION_JSON";
 
 	/**
@@ -64,17 +58,16 @@ public class DataStreamerCatalogApplication implements ApplicationContextAware {
 		} else {
 			logger.warn("main: no configuration found in environment {}", CONFIG_ENV_VAR_NAME);
 		}
-		ConfigurableApplicationContext cxt = SpringApplication.run(DataStreamerCatalogApplication.class, args);
+		ConfigurableApplicationContext cxt = SpringApplication.run(DataStreamerRestProxyApplication.class, args);
 		logger.info("main: context is {}", cxt);
 		// Closing the context stops the application, so ignore
 		// the Sonar advice that the context must be closed here!
 	}
 
-	@Override
 	public void setApplicationContext(ApplicationContext context) {
 		final String activeProfile = "src";
 		logger.info("setApplicationContext: setting profile {}", activeProfile);
 		((ConfigurableEnvironment) context.getEnvironment()).setActiveProfiles(activeProfile);
 	}
-}
 
+}
