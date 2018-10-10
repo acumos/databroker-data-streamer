@@ -36,6 +36,8 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 import org.json.simple.JSONArray;
 import org.json.simple.parser.JSONParser;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
 import org.json.simple.parser.ParseException;
@@ -45,6 +47,7 @@ import org.acumos.streamer.common.DataStreamerUtil;
 import org.acumos.streamer.exception.DataStreamerException;
 
 @Service
+@PropertySource("classpath:application.properties")
 public class MessageRouterTask implements  Runnable {
 	
 	private static final String MODEL_VERSION = "modelVersion";
@@ -74,8 +77,9 @@ public class MessageRouterTask implements  Runnable {
 	private static final String CATALOG_KEY = "catalogKey";
 
 	private static final String MSG_ROUTER = "MsgRouter";
-
-	private static final String BASIC_AUTHORIZATION = "basic.authorization";
+	
+	@Value("${basic.authorization}")
+ 	private String  authorization;
 	
 	private static final String NEWLINE = "\n";
 
@@ -99,8 +103,6 @@ public class MessageRouterTask implements  Runnable {
 	public void run() {
 		
      	log.info("MessageRouterTask::run: Begin");
-     	
-     	String  authorization = env.getProperty(BASIC_AUTHORIZATION);
 	        
 		JSONParser parser = new JSONParser();
 	     
@@ -353,7 +355,6 @@ public class MessageRouterTask implements  Runnable {
 	  org.json.JSONObject catalogDetails = null;
 	  try {
 		  
-		  String  authorization = env.getProperty(BASIC_AUTHORIZATION);
 			log.info("MessageRouterTask::getPredictDetails()::fetching details of predictor");
 			catalogDetails = DataStreamerUtil.getCatalogDetails(authorization,catalogKey);
 						
