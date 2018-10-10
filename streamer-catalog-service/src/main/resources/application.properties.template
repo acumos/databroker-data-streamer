@@ -42,3 +42,13 @@ login.failure.block.time = 900
 
 # basic auth 
 basic.authorization=dummy
+
+security.user.name=dummy
+security.user.password=dummy
+
+mongo_username=dummy
+mongo_password=dummy
+mongo_dbname=DUMMY_DB
+mongo_hostname=localhost
+mongo_port=27017
+mongo_collection_name=streamer_catalog

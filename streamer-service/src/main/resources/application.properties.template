@@ -50,3 +50,8 @@ login.failure.count = 3
 login.failure.block.time = 900
 # basic auth for the messageRouterTask
 basic.authorization = dummy
+
+security.user.name=dummy
+security.user.password=dummy
+
+catalog_url_prefix=<catalog_url>

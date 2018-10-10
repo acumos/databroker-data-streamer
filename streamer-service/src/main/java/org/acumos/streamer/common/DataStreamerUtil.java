@@ -33,6 +33,7 @@ import java.util.Properties;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.acumos.streamer.exception.DataStreamerException;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
@@ -44,7 +45,10 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.acumos.streamer.exception.DataStreamerException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
+import org.springframework.stereotype.Component;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
@@ -54,6 +58,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
  * 
  */
 
+@Component
 public class DataStreamerUtil {
 	
 	private static final String CATALOG_URL_PREFIX = "catalog_url_prefix";
@@ -65,8 +70,11 @@ public class DataStreamerUtil {
 	private static final String FILE_SEPARATOR = "file.separator";
 	private static final String CONFIG_PROPERTIES2 = "/config.properties";
 	private static final Logger log = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
+	
+	@Autowired
+	private Environment env;
 
-	public static String getComponentPropertyValue(String key) throws IOException {
+	public String getComponentPropertyValue(String key) throws IOException {
 		Properties prop = new Properties();
 		InputStream input;
 		if (new File(System.getProperty(USER_DIR) + System.getProperty(FILE_SEPARATOR) + CONFIG_PROPERTIES)
@@ -76,13 +84,16 @@ public class DataStreamerUtil {
 		} else {
 			input = DataStreamerUtil.class.getResourceAsStream(CONFIG_PROPERTIES2);
 		}
+		
+		if(input == null) return null;
+		
 		prop.load(input);
 		input.close();
 
 		return prop.getProperty(key);
 	}
 	
-	public static String getComponentPropertyValue(String key, String defaultValue) throws IOException {
+	public String getComponentPropertyValue(String key, String defaultValue) throws IOException {
 		Properties prop = new Properties();
 		InputStream input;
 		String value = null;
@@ -104,7 +115,7 @@ public class DataStreamerUtil {
 			return defaultValue;
 	}
 
-	public static String getRemoteUser(HttpServletRequest request) {
+	public String getRemoteUser(HttpServletRequest request) {
 		if (request.getRemoteUser() != null) {
 			return request.getRemoteUser();
 		}
@@ -123,28 +134,39 @@ public class DataStreamerUtil {
 		return null;
 	}
 
-	public static String getEnv(String envKey, String defaultValue) {
-		String value = System.getenv(envKey);
+	public String getEnv(String envKey, String defaultValue) {
+		
+		String value = null;
+		
+		if (value == null && env != null) {
+			value = env.getProperty(envKey);
+		}
+		
+		if (value == null) {
+		 value = System.getenv(envKey);
+		}
+		
 		if (value == null) {
 			value = System.getProperty(envKey);
-		}
+		} 
+		
+		
 		if (value == null) {
 			value = defaultValue;
 		}
 		return value;
 	}
 
-	public static void setEnv(String envKey, String value) {
+	public void setEnv(String envKey, String value) {
 		if (value != null) {
 			System.setProperty(envKey, value);
 		}
 	}
 
 	
-	public static JSONObject getCatalogDetails (String authorization, String catalogKey) throws IOException, DataStreamerException{
+	public JSONObject getCatalogDetails (String authorization, String catalogKey) throws IOException, DataStreamerException{
 		
-		String catalogUrl = DataStreamerUtil.getEnv(CATALOG_URL_PREFIX,
-				DataStreamerUtil.getComponentPropertyValue(CATALOG_URL_PREFIX)) + catalogKey + "?mode=concise";
+		String catalogUrl = getEnv(CATALOG_URL_PREFIX, getComponentPropertyValue(CATALOG_URL_PREFIX)) + catalogKey + "?mode=concise";
 		log.info("HelerTool::getPredictorDetails()::url to be called for getting information about catalog is " + catalogUrl);
 		
 		HttpClient client = HttpClients.createDefault();
@@ -184,10 +206,10 @@ public class DataStreamerUtil {
 		return new JSONObject(responseContents.toString());
 	}
 	
-	public static JSONArray getCatalogsByCategory (String authorization, String category) 
+	public JSONArray getCatalogsByCategory (String authorization, String category) 
 			throws IOException, DataStreamerException, ParseException{
 		
-		String configPrefix = DataStreamerUtil.getEnv(CATALOG_URL_PREFIX, DataStreamerUtil.getComponentPropertyValue(CATALOG_URL_PREFIX));
+		String configPrefix = getEnv(CATALOG_URL_PREFIX, getComponentPropertyValue(CATALOG_URL_PREFIX));
 		String catalogPrefix = configPrefix.endsWith("/")?configPrefix.substring(0,configPrefix.lastIndexOf("/")):configPrefix;
 		
 		String catalogUrl = catalogPrefix  + "?category=" + category;
@@ -219,7 +241,7 @@ public class DataStreamerUtil {
 		return catalogArray;
 	}
 	
-	public static String[] getMsgsFromSubscriber (String authorization, String subscriberUrl) 
+	public String[] getMsgsFromSubscriber (String authorization, String subscriberUrl) 
 			throws IOException, DataStreamerException, ParseException{
 		
 		HttpClient client = HttpClients.createDefault();

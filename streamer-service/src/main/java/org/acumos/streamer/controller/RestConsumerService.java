@@ -22,7 +22,8 @@ package org.acumos.streamer.controller;
 
 import java.io.InputStream;
 
-import javax.ws.rs.core.Response;
+import org.acumos.streamer.common.JsonResponse;
+import org.springframework.http.ResponseEntity;
 
 public interface RestConsumerService {
 	
@@ -41,7 +42,7 @@ public interface RestConsumerService {
 	 * 				the files that are attached as part of the request
 	 * @return status of the service after the operation
 	 */
-	public Response operateData(String authorization, String feedAuthorization, 
+	public ResponseEntity<JsonResponse> operateData(String authorization, String feedAuthorization, 
 			String catalogKey, String fileName,
 			InputStream attachedFiles);
 
