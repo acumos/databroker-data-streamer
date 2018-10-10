@@ -14,14 +14,28 @@
 .. WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 .. See the License for the specific language governing permissions and
 .. limitations under the License.
-.. ===============LICENSE_END=========================================================
+.. ===============LICENSE_END===========================================================
 
 =============================
 Datastreamer Service Overview
 =============================
 
-The Acumos Datastreamer Service provides ways to store the datastreamer metadata plus to handle both datarouter and messagerouter
-The server component is a Spring-Boot application that provides REST service to callers.
+The Acumos Datastreamer Service provides ways to store the datastreamer metadata plus to 
+handle both datarouter and messagerouter. Also it provides a rest proxy service which
+talks to kafka client running on that environment and provides http end point for sending
+and recieving messages.
+
+There are three services running in this Streamer component. One is the Streamer Catalog
+component which handles and stores the catalog objects which contain the url in which we
+retrieve messages from and publish data to. Second one is the Streamer component itself which
+handles message routing which gets data from the url which is provided in the catalog and sends 
+to prediction and gets the results back and publich the results to the URL which was provided 
+in the catalog.Third one is the rest proxy component which enables you create the URLS from 
+which you can send and recieve data when you have Kafka running locally. If you have a topic
+defined in kafka locally or wherever you running this rest proxy service it enables to send and
+recieve data.
+ 
+The server component is a Spring-Boot application that provides REST services to callers.
 The client component is a Java library that provides business objects (models) and
 methods to simplify the use of the REST service.
 
