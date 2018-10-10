@@ -240,7 +240,7 @@
                                           <pushRegistry>${docker.push.registry}</pushRegistry>
                                           <images>
                                                   <image>
-                                                          <name>databroker-zipbroker:${project.version}</name>
+                                                          <name>streamer-service:${project.version}</name>
 															<build>
                                                                     <from>frolvlad/alpine-oraclejdk8:slim</from>
                                                                  <tags>

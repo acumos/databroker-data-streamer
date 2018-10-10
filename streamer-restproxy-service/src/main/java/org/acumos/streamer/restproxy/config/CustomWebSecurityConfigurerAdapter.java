@@ -18,7 +18,7 @@
  * ===============LICENSE_END=========================================================
  */
 
-package org.acumos.streamercatalog.config;
+package org.acumos.streamer.restproxy.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -27,8 +27,6 @@ import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint;
-
-import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
  * Spring 4 security requires a CSRF token on POST/PUT/DELETE requests. But this
@@ -40,11 +38,10 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  * http://ryanjbaxter.com/2015/01/06/securing-rest-apis-with-spring-boot/
  */
 @Configuration
-@EnableSwagger2
 @EnableWebSecurity
 public class CustomWebSecurityConfigurerAdapter extends WebSecurityConfigurerAdapter {
 
-	private static final String REALM_NAME = "Acumos-DataStreamer-Catalog";
+	private static final String REALM_NAME = "Acumos-DataStreamer";
 
 	/**
 	 * Open access to the documentation.

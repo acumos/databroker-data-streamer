@@ -49,12 +49,15 @@ public class RestConsumerServiceImpl implements RestConsumerService {
 	@Autowired
 	private HttpServletRequest request;
 	
+	@Autowired
+	DataStreamerUtil dataStreamerUtil;
+	
 
 
 	@Override
 	public Response operateData(String authorization, String feedAuthorization, String catalogKey, String fileName,
 			InputStream attachedFiles) {
-		String user = DataStreamerUtil.getRemoteUser(request);
+		String user = dataStreamerUtil.getRemoteUser(request);
 		
 		try {
 			String response = aConsumerService.operateData(user, authorization, feedAuthorization, fileName, catalogKey, attachedFiles);

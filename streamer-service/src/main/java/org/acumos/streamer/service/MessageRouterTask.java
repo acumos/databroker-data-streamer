@@ -34,17 +34,19 @@ import java.util.List;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
+
+import org.acumos.streamer.common.DataStreamerUtil;
+import org.acumos.streamer.exception.DataStreamerException;
 import org.json.simple.JSONArray;
 import org.json.simple.parser.JSONParser;
-import org.springframework.core.env.Environment;
-import org.springframework.stereotype.Service;
 import org.json.simple.parser.ParseException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.acumos.streamer.common.DataStreamerUtil;
-import org.acumos.streamer.exception.DataStreamerException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
+import org.springframework.stereotype.Component;
 
-@Service
+@Component
 public class MessageRouterTask implements  Runnable {
 	
 	private static final String MODEL_VERSION = "modelVersion";
@@ -82,18 +84,16 @@ public class MessageRouterTask implements  Runnable {
 	
 	private static final Logger log = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 	
-	private Environment env = null;
+	@Autowired
+	Environment env;
 	
+	@Autowired
+	DataStreamerUtil dataStreamerUtil;
 	
 	private String catalogKey;
 	
 	public MessageRouterTask() {
-		
-	}
-	
-	public MessageRouterTask(Environment env) {
-		
-		this.env = env;
+		// TODO Auto-generated constructor stub
 	}
 	
 	public void run() {
@@ -109,7 +109,7 @@ public class MessageRouterTask implements  Runnable {
 		JSONArray catalogArray;
 		
 			try {
-				catalogArray = DataStreamerUtil.getCatalogsByCategory(authorization, MSG_ROUTER);
+				catalogArray = dataStreamerUtil.getCatalogsByCategory(authorization, MSG_ROUTER);
 				
 		        for (Object str : catalogArray.toArray()) {
 		        	try {
@@ -162,7 +162,7 @@ public class MessageRouterTask implements  Runnable {
 			 int counter=0;
 			 while(true) {
 				    log.info("fetching data from subscriber: " + subscriberUrl);
-				    String[] responseDataLocal = DataStreamerUtil.getMsgsFromSubscriber(Authorization, subscriberUrl);
+				    String[] responseDataLocal = dataStreamerUtil.getMsgsFromSubscriber(Authorization, subscriberUrl);
 					//if no response and counter is 0 then wait for polling interval
 				    if(responseDataLocal.length==0 && counter==0) {
 				    	TimeUnit.MINUTES.sleep(pollingInterval);
@@ -355,7 +355,7 @@ public class MessageRouterTask implements  Runnable {
 		  
 		  String  authorization = env.getProperty(BASIC_AUTHORIZATION);
 			log.info("MessageRouterTask::getPredictDetails()::fetching details of predictor");
-			catalogDetails = DataStreamerUtil.getCatalogDetails(authorization,catalogKey);
+			catalogDetails = dataStreamerUtil.getCatalogDetails(authorization,catalogKey);
 						
 		
 		} catch (IOException | DataStreamerException e) {

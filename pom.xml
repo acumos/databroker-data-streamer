@@ -30,6 +30,7 @@
 		<!-- Child modules do NOT name this parent. -->
 		<module>streamer-service</module>
 		<module>streamer-catalog-service</module>
+		<module>streamer-restproxy-service</module>
 	</modules>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
