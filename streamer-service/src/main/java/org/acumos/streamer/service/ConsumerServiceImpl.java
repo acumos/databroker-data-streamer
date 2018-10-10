@@ -89,6 +89,9 @@ public class ConsumerServiceImpl implements ConsumerService {
 
 	@Autowired
 	PublisherService aPublisherService;
+	
+	@Autowired
+	DataStreamerUtil dataStreamerUtil;
 
 	/*
 	 * (non-Javadoc)
@@ -116,12 +119,12 @@ public class ConsumerServiceImpl implements ConsumerService {
 		String finalname = null;
 		try {
 			log.info("ConsumerServiceImpl::operateData()::user dir:" + System.getProperty(USER_DIR));
-			log.info("ConsumerServiceImpl::operateData()::" + DataStreamerUtil.getEnv(FILEPATH_STRING, DataStreamerUtil.getComponentPropertyValue(FILEPATH_STRING)));
-		    log.info("ConsumerServiceImpl::operateData()::" + DataStreamerUtil.getEnv(FILE_SUFFIX, DataStreamerUtil.getComponentPropertyValue(FILE_SUFFIX)));
+			log.info("ConsumerServiceImpl::operateData()::" + dataStreamerUtil.getEnv(FILEPATH_STRING, dataStreamerUtil.getComponentPropertyValue(FILEPATH_STRING)));
+		    log.info("ConsumerServiceImpl::operateData()::" + dataStreamerUtil.getEnv(FILE_SUFFIX, dataStreamerUtil.getComponentPropertyValue(FILE_SUFFIX)));
 			finalname = System.getProperty(USER_DIR) + System.getProperty("file.separator")
-					+ DataStreamerUtil.getEnv(FILEPATH_STRING, DataStreamerUtil.getComponentPropertyValue(FILEPATH_STRING))
+					+ dataStreamerUtil.getEnv(FILEPATH_STRING, dataStreamerUtil.getComponentPropertyValue(FILEPATH_STRING))
 					+ System.getProperty("file.separator") + filename
-					+ DataStreamerUtil.getEnv(FILE_SUFFIX, DataStreamerUtil.getComponentPropertyValue(FILE_SUFFIX));
+					+ dataStreamerUtil.getEnv(FILE_SUFFIX, dataStreamerUtil.getComponentPropertyValue(FILE_SUFFIX));
 			log.info("ConsumerServiceImpl::operateData()::generating the absolute path of file " + finalname);
 		} catch (IOException e) {
 			log.error("ConsumerServiceImpl::operateData()::Encountered error while generating absolute path of file :"
@@ -134,7 +137,7 @@ public class ConsumerServiceImpl implements ConsumerService {
 
 		try {
 			log.info("ConsumerServiceImpl::operateData()::fetching details of predictor");
-			catalogDetails = DataStreamerUtil.getCatalogDetails(authorization,catalogKey);		
+			catalogDetails = dataStreamerUtil.getCatalogDetails(authorization,catalogKey);		
 		
 		} catch (IOException | DataStreamerException e) {
 			log.error("ConsumerServiceImpl::operateData()::Encountered error while fetchng details of predictor :"
