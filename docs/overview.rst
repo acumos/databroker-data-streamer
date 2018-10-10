@@ -21,7 +21,7 @@ Datastreamer Service Overview
 =============================
 
 The Acumos Datastreamer Service provides ways to store the datastreamer metadata plus to handle both datarouter and messagerouter
-The server component is a Spring-Boot application that provides REST service to callers.
+The server component is a Spring-Boot application that provides REST services to callers.
 The client component is a Java library that provides business objects (models) and
 methods to simplify the use of the REST service.
 
