@@ -25,16 +25,17 @@ import java.io.InputStream;
 import java.lang.invoke.MethodHandles;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.ws.rs.core.Response;
-import javax.ws.rs.core.Response.Status;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import org.acumos.streamer.common.DataStreamerUtil;
+import org.acumos.streamer.common.JsonResponse;
 import org.acumos.streamer.exception.DataStreamerException;
 import org.acumos.streamer.service.ConsumerService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
 
 @Service
 public class RestConsumerServiceImpl implements RestConsumerService {
@@ -49,25 +50,28 @@ public class RestConsumerServiceImpl implements RestConsumerService {
 	@Autowired
 	private HttpServletRequest request;
 	
+	@Autowired
+	private DataStreamerUtil dataStreamerUtil;
+	
 
 
 	@Override
-	public Response operateData(String authorization, String feedAuthorization, String catalogKey, String fileName,
+	public ResponseEntity<JsonResponse> operateData(String authorization, String feedAuthorization, String catalogKey, String fileName,
 			InputStream attachedFiles) {
-		String user = DataStreamerUtil.getRemoteUser(request);
+		String user = dataStreamerUtil.getRemoteUser(request);
 		
 		try {
 			String response = aConsumerService.operateData(user, authorization, feedAuthorization, fileName, catalogKey, attachedFiles);
 			
 			if (response.equals(SUCCESS)){
-					return Response.status(Status.OK).build();
+					return new ResponseEntity<JsonResponse>(new JsonResponse("") ,HttpStatus.OK);
 				}
 				
 		} catch (DataStreamerException e) {
 			logger.info("RestConsumerService::operateData()::There was error in response from RestConsumerService: operateData . operate data returned:" + e.getMessage());
-			return Response.status(Status.INTERNAL_SERVER_ERROR).entity(e.getMessage()).build();
+			return new ResponseEntity<JsonResponse>(new JsonResponse(e.getMessage()) ,HttpStatus.INTERNAL_SERVER_ERROR);
 		}
-		return Response.status(Status.NO_CONTENT).build();
+		return new ResponseEntity<JsonResponse>(new JsonResponse("") ,HttpStatus.NO_CONTENT);
 	}
 
 }

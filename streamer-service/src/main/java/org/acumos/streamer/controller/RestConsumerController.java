@@ -21,14 +21,16 @@ package org.acumos.streamer.controller;
 
 import java.io.InputStream;
 import java.lang.invoke.MethodHandles;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
 
+import javax.ws.rs.core.MediaType;
+
+import org.acumos.streamer.common.JsonResponse;
 import org.acumos.streamer.model.ResponseMessage;
 import org.apache.cxf.jaxrs.ext.multipart.Multipart;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestHeader;
@@ -80,13 +82,11 @@ public class RestConsumerController {
 			@ApiResponse(code = 404, message = SERVICE_NOT_AVAILABLE),
 			@ApiResponse(code = 500, message = UNEXPECTED_RUNTIME_ERROR) })
 	@ResponseBody
-	public Response operateData(@RequestHeader(AUTHORIZATION) String authorization,
+	public ResponseEntity<JsonResponse> operateData(@RequestHeader(AUTHORIZATION) String authorization,
 			@RequestParam(FEED_AUTH) String feedAuthorization, @PathVariable(CATALOG_KEY) String catalogKey,
 			@PathVariable(FILE_NAME) String fileName,
 			@Multipart(value = FILE, type = APPLICATION_OCTET_STREAM) InputStream attachedFiles) {
-		
 		logger.debug("in operateData in RestConsumerCOntroller");
-		
 		return service.operateData(authorization, feedAuthorization, catalogKey, fileName, attachedFiles);
 	}
 

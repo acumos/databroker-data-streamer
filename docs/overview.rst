@@ -20,10 +20,14 @@
 Datastreamer Service Overview
 =============================
 
-The Acumos Datastreamer Service provides ways to store the datastreamer metadata plus to handle both datarouter and messagerouter
+The Acumos Datastreamer Service provides ways to store the datastreamer metadata plus to handle both datarouter and message router
+Datastreamer is divided into two mS i.e. streamer-catalog-service and streamer-service
+streamer-catalog-service is responsible to store the metadata about message router (eg Kafka) which is publisher/subscriber url and its credentials
+streamer-service is basically a background process which runs every 60 minutes and process configured message router via streamer-catalog-service
+streamer-service pulls the scoring data from message router, send it to configured predictor to score and publish the score result back to configured message router
+streamer-restproxy-service is for local development where we don't have real message router configured, this proxy url can be configured as publisher/subscriber into catalog
+streamer-restproxy-service user need to start local kafka message router on his local machine and point this service to the same kafka message router
 The server component is a Spring-Boot application that provides REST service to callers.
-The client component is a Java library that provides business objects (models) and
-methods to simplify the use of the REST service.
 
 The source is available from the Linux Foundation Gerrit server:
 

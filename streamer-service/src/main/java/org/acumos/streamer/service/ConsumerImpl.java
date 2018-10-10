@@ -26,12 +26,12 @@ import java.lang.invoke.MethodHandles;
 
 import javax.ws.rs.core.Response.Status;
 
+import org.acumos.streamer.exception.DataStreamerException;
 import org.apache.cxf.jaxrs.ext.multipart.Attachment;
 import org.apache.cxf.jaxrs.ext.multipart.MultipartBody;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Service;
-import org.acumos.streamer.exception.DataStreamerException;;
+import org.springframework.stereotype.Service;;
 
 @Service
 public class ConsumerImpl {

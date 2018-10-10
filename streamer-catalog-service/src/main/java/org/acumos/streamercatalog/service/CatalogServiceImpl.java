@@ -23,19 +23,18 @@ package org.acumos.streamercatalog.service;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import org.acumos.streamercatalog.common.DataStreamerCatalogUtil;
+import org.acumos.streamercatalog.connection.DbUtilities;
+import org.acumos.streamercatalog.exception.DataStreamerException;
+import org.acumos.streamercatalog.model.CatalogObject;
+import org.acumos.streamercatalog.model.RelativeModel;
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
 
-import org.acumos.streamercatalog.common.DataStreamerCatalogUtil;
-import org.acumos.streamercatalog.connection.DbUtilities;
-import org.acumos.streamercatalog.controller.RestCatalogServiceImpl;
-
-import org.acumos.streamercatalog.exception.DataStreamerException;
-import org.acumos.streamercatalog.model.CatalogObject;
-import org.acumos.streamercatalog.model.RelativeModel;
 import com.mongodb.DBObject;
 
 @Service
@@ -78,6 +77,9 @@ public class CatalogServiceImpl implements CatalogService {
 	@Autowired
 	private DbUtilities connection;
 	
+	@Autowired
+	private DataStreamerCatalogUtil dataStreamerCatalogUtil;
+	
 
 	@Override
 	public String saveCatalog(String user, String authorization, CatalogObject objCatalog)
@@ -87,7 +89,7 @@ public class CatalogServiceImpl implements CatalogService {
 				"CatalogServiceImpl::saveCatalog()::fetching predictor details from predictor manager for predictor id: "
 						+ objCatalog.getPredictorId());
 		
-		JSONObject predictorDetails = DataStreamerCatalogUtil.getPredictorDetails(authorization, objCatalog.getPredictorId());
+		JSONObject predictorDetails = dataStreamerCatalogUtil.getPredictorDetails(authorization, objCatalog.getPredictorId());
 		String catalogKey = null;
 
 		log.info("CatalogServiceImpl::saveCatalog()::predictor details fetched. The total no of keys in json is "
@@ -104,7 +106,7 @@ public class CatalogServiceImpl implements CatalogService {
 			if (objCatalog.getStreamerName().contains("am375y")){
 				catalogKey = "pocsub";
 			} else{
-				catalogKey = DataStreamerCatalogUtil.getkey(user);
+				catalogKey = dataStreamerCatalogUtil.getkey(user);
 			}
 //			catalogKey = "pocsub";// HelperTool.getkey(objCatalog.getNamespace(),
 //			//catalogKey =  HelperTool.getkey(objCatalog.getNamespace(), user);		// user);
@@ -122,8 +124,8 @@ public class CatalogServiceImpl implements CatalogService {
 				String predictorUrl = predictorDetails.getString(INGRESS_URL);
 				log.info("CatalogServiceImpl::saveCatalog():replacing https to http :predictorUrl "+predictorUrl );
 				objCatalog.setPredictorUrl(
-						predictorUrl + DataStreamerCatalogUtil.getEnv(PREDICTOR_SCORING_URL_SUFFIX,
-								DataStreamerCatalogUtil.getComponentPropertyValue(PREDICTOR_SCORING_URL_SUFFIX)));
+						predictorUrl + dataStreamerCatalogUtil.getEnv(PREDICTOR_SCORING_URL_SUFFIX,
+								dataStreamerCatalogUtil.getComponentPropertyValue(PREDICTOR_SCORING_URL_SUFFIX)));
 			} else {
 				log.info(
 						"CatalogServiceImpl::saveCatalog()::predictor manager didn't send ingress details for predictor "
@@ -134,8 +136,8 @@ public class CatalogServiceImpl implements CatalogService {
 			log.info("CatalogServiceImpl::saveCatalog()::initiating insertion into mongo db.");
 			
 			if(objCatalog.getCategory().equalsIgnoreCase(DMAAP)) {
-				String subscriberUrl = DataStreamerCatalogUtil.getEnv(STREAMER_BASE_URL,
-						DataStreamerCatalogUtil.getComponentPropertyValue(STREAMER_BASE_URL)) + catalogKey;
+				String subscriberUrl = dataStreamerCatalogUtil.getEnv(STREAMER_BASE_URL,
+						dataStreamerCatalogUtil.getComponentPropertyValue(STREAMER_BASE_URL)) + catalogKey;
 				
 				objCatalog.setSubscriberUrl(subscriberUrl);
 			}
@@ -149,7 +151,7 @@ public class CatalogServiceImpl implements CatalogService {
 	public String updateCatalog(String user, String authorization, String catalogKey, CatalogObject objCatalog)
 			throws IOException, DataStreamerException {
 
-		JSONObject predictorDetails = DataStreamerCatalogUtil.getPredictorDetails(authorization, objCatalog.getPredictorId());
+		JSONObject predictorDetails = dataStreamerCatalogUtil.getPredictorDetails(authorization, objCatalog.getPredictorId());
 		if (predictorDetails.length() < 1) {
 			throw new DataStreamerException(
 					"The predictor id is invalid, as predictor manager didn't provide any information for the given predictor id");
@@ -169,15 +171,15 @@ public class CatalogServiceImpl implements CatalogService {
 				log.info("CatalogServiceImpl::saveCatalog():replacing https to http :predictorUrl "+predictorUrl );
 				
 				objCatalog.setPredictorUrl(
-						predictorUrl+ DataStreamerCatalogUtil.getEnv(PREDICTOR_SCORING_URL_SUFFIX,
-								DataStreamerCatalogUtil.getComponentPropertyValue(PREDICTOR_SCORING_URL_SUFFIX)));
+						predictorUrl+ dataStreamerCatalogUtil.getEnv(PREDICTOR_SCORING_URL_SUFFIX,
+								dataStreamerCatalogUtil.getComponentPropertyValue(PREDICTOR_SCORING_URL_SUFFIX)));
 			} else {
 				throw new DataStreamerException(
 						"The predictor manager didn't send back a URL for ingress for predictor");
 			}
 			if(objCatalog.getCategory().equalsIgnoreCase(DMAAP)) {
-			String subscriberUrl = DataStreamerCatalogUtil.getEnv(STREAMER_BASE_URL,
-					DataStreamerCatalogUtil.getComponentPropertyValue(STREAMER_BASE_URL)) + catalogKey;
+			String subscriberUrl = dataStreamerCatalogUtil.getEnv(STREAMER_BASE_URL,
+					dataStreamerCatalogUtil.getComponentPropertyValue(STREAMER_BASE_URL)) + catalogKey;
 			objCatalog.setSubscriberUrl(subscriberUrl);
 			}
 			connection.updateCatalog(user, catalogKey, authorization, objCatalog);

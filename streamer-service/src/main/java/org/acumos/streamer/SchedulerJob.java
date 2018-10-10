@@ -24,24 +24,22 @@ import java.lang.invoke.MethodHandles;
 
 import javax.annotation.PostConstruct;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.env.Environment;
-import org.springframework.core.task.TaskExecutor;
-import org.springframework.scheduling.annotation.Scheduled;
-import org.springframework.stereotype.Component;
-
 import org.acumos.streamer.service.MessageRouterTask;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.task.TaskExecutor;
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Service;
 
-@Component
+@Service
 public class SchedulerJob {
 
 	@Autowired
 	private TaskExecutor taskExecutor;
 	
 	@Autowired
-	private Environment env;
+	private MessageRouterTask messageRouterTask;
 	
 	private static final Logger log = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 	
@@ -49,8 +47,7 @@ public class SchedulerJob {
 	@Scheduled(fixedDelay=600000)
 	public void runFixedSchdule() {
 		log.info("Schdule job invoked");
-		taskExecutor.execute(new MessageRouterTask(env));
-		
-		log.info("Schdule job end");
+		taskExecutor.execute(messageRouterTask);
+		log.info("Schedule job end");
 	}
 }
