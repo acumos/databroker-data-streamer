@@ -25,5 +25,4 @@ The service is deployed as a jar file to a Maven Nexus repository. The server is
 Version 1.17.15, 11 Sep 2018
 ----------------------------
 
-* Added new API endpoint to get Datastreamer info, right now it is just prototype (ACUMOS-1182)
-
+* Added completd functionality of DataStreamer (ACUMOS-1182)

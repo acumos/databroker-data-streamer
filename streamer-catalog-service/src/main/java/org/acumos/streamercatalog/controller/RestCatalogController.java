@@ -23,8 +23,11 @@ import java.lang.invoke.MethodHandles;
 
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
 
+import org.acumos.streamercatalog.model.CatalogObject;
+import org.acumos.streamercatalog.model.ResponseMessage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -35,10 +38,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.acumos.streamercatalog.model.CatalogObject;
-import org.acumos.streamercatalog.model.ResponseMessage;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -79,7 +78,7 @@ public class RestCatalogController {
 	private static final Logger logger = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 	
 	@Autowired
-	RestCatalogServiceImpl service;
+	private RestCatalogServiceImpl service;
 	
 	@RequestMapping(method = RequestMethod.POST)
 	@ApiOperation(value = RESPOND_TO_A_NEW_STREAMER_URL , notes = RETURNS_A_JSON_OBJECT_WITH_STRING_PROVIDING_INFO, response = ResponseMessage.class)
@@ -92,9 +91,7 @@ public class RestCatalogController {
 	@ResponseBody
 	public ResponseEntity saveCatalog(@RequestHeader(AUTHORIZATION) String authorization,
 			@RequestBody CatalogObject objCatalog) {
-		
 		logger.info("Saving new catalog object:");
-		
 		return service.saveCatalog(authorization, objCatalog);
 	}
 

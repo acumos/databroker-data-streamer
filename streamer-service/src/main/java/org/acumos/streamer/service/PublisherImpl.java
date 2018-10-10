@@ -33,13 +33,12 @@ import java.net.HttpURLConnection;
 import java.net.ProtocolException;
 import java.net.URL;
 
+import org.acumos.streamer.exception.DataStreamerException;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.cxf.jaxrs.ext.multipart.Attachment;
 import org.apache.cxf.jaxrs.ext.multipart.MultipartBody;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import org.acumos.streamer.exception.DataStreamerException;
 
 
 public class PublisherImpl {
