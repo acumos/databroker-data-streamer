@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "256b8c1f_6481ee3c",
+        "filename": "streamer-catalog-service/pom.xml",
+        "patchSetId": 9
+      },
+      "lineNbr": 272,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-11-05T21:59:03Z",
+      "side": 1,
+      "message": "probably want to use the Maven artifactId here, not a hardcoded string",
+      "range": {
+        "startLine": 272,
+        "startChar": 64,
+        "endLine": 272,
+        "endChar": 88
+      },
+      "revId": "b39be0168971367fe5a7db2e4941af21ed82ff67",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
