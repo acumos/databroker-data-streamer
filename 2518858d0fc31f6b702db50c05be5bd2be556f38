@@ -1,0 +1,582 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f035051e_4985f750",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 10
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-11-05T21:59:03Z",
+      "side": 1,
+      "message": "pls remove this blank line, put all the footer lines together",
+      "revId": "2518858d0fc31f6b702db50c05be5bd2be556f38",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5c40bc8f_3e54af74",
+        "filename": "streamer-catalog-service/src/main/java/org/acumos/streamercatalog/connection/DbUtilities.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-11-05T21:59:03Z",
+      "side": 1,
+      "message": "pls make private",
+      "range": {
+        "startLine": 140,
+        "startChar": 1,
+        "endLine": 140,
+        "endChar": 12
+      },
+      "revId": "2518858d0fc31f6b702db50c05be5bd2be556f38",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "26140544_c8431780",
+        "filename": "streamer-catalog-service/src/main/java/org/acumos/streamercatalog/connection/DbUtilities.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-11-05T21:59:03Z",
+      "side": 1,
+      "message": "should also be private",
+      "range": {
+        "startLine": 143,
+        "startChar": 1,
+        "endLine": 143,
+        "endChar": 24
+      },
+      "revId": "2518858d0fc31f6b702db50c05be5bd2be556f38",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "711948af_0007847e",
+        "filename": "streamer-catalog-service/src/main/java/org/acumos/streamercatalog/controller/RestCatalogController.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-11-05T21:59:03Z",
+      "side": 1,
+      "message": "pls make private",
+      "range": {
+        "startLine": 82,
+        "startChar": 1,
+        "endLine": 82,
+        "endChar": 12
+      },
+      "revId": "2518858d0fc31f6b702db50c05be5bd2be556f38",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "92ff5be7_e0482ef8",
+        "filename": "streamer-catalog-service/src/main/java/org/acumos/streamercatalog/controller/RestCatalogController.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-11-05T21:59:03Z",
+      "side": 1,
+      "message": "should also be private",
+      "range": {
+        "startLine": 85,
+        "startChar": 1,
+        "endLine": 85,
+        "endChar": 23
+      },
+      "revId": "2518858d0fc31f6b702db50c05be5bd2be556f38",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7788c295_64a4c78f",
+        "filename": "streamer-catalog-service/src/main/java/org/acumos/streamercatalog/controller/RestCatalogServiceImpl.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-11-05T21:59:03Z",
+      "side": 1,
+      "message": "pls make private",
+      "range": {
+        "startLine": 54,
+        "startChar": 1,
+        "endLine": 54,
+        "endChar": 12
+      },
+      "revId": "2518858d0fc31f6b702db50c05be5bd2be556f38",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "edf3d58e_44b7ef6a",
+        "filename": "streamer-catalog-service/src/main/java/org/acumos/streamercatalog/controller/RestCatalogServiceImpl.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-11-05T21:59:03Z",
+      "side": 1,
+      "message": "This should also be private",
+      "range": {
+        "startLine": 57,
+        "startChar": 1,
+        "endLine": 57,
+        "endChar": 24
+      },
+      "revId": "2518858d0fc31f6b702db50c05be5bd2be556f38",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9f8d0779_72638172",
+        "filename": "streamer-catalog-service/src/main/java/org/acumos/streamercatalog/service/CatalogServiceImpl.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-11-05T21:59:03Z",
+      "side": 1,
+      "message": "pls make private",
+      "range": {
+        "startLine": 81,
+        "startChar": 1,
+        "endLine": 81,
+        "endChar": 12
+      },
+      "revId": "2518858d0fc31f6b702db50c05be5bd2be556f38",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ca4b9fcb_20901b8c",
+        "filename": "streamer-catalog-service/src/main/java/org/acumos/streamercatalog/service/CatalogServiceImpl.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-11-05T21:59:03Z",
+      "side": 1,
+      "message": "pls make private",
+      "revId": "2518858d0fc31f6b702db50c05be5bd2be556f38",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e01c7865_deef09f9",
+        "filename": "streamer-restproxy-service/pom.xml",
+        "patchSetId": 10
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-11-05T21:59:03Z",
+      "side": 1,
+      "message": "This needs the docker client!?",
+      "range": {
+        "startLine": 42,
+        "startChar": 12,
+        "endLine": 42,
+        "endChar": 34
+      },
+      "revId": "2518858d0fc31f6b702db50c05be5bd2be556f38",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3f817c76_7a85a68f",
+        "filename": "streamer-restproxy-service/pom.xml",
+        "patchSetId": 10
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-11-05T21:59:03Z",
+      "side": 1,
+      "message": "Pls fix indentation",
+      "revId": "2518858d0fc31f6b702db50c05be5bd2be556f38",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "456afa46_ea0e83cc",
+        "filename": "streamer-restproxy-service/src/main/java/org/acumos/streamer/restproxy/controller/PublisherSubscriberServiceImpl.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-11-05T21:59:03Z",
+      "side": 1,
+      "message": "Use logger.debug, not System.out",
+      "range": {
+        "startLine": 148,
+        "startChar": 4,
+        "endLine": 148,
+        "endChar": 7
+      },
+      "revId": "2518858d0fc31f6b702db50c05be5bd2be556f38",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c5d9f7ba_fd6cd372",
+        "filename": "streamer-restproxy-service/src/main/java/org/acumos/streamer/restproxy/controller/PublisherSubscriberServiceImpl.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 187,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-11-05T21:59:03Z",
+      "side": 1,
+      "message": "pls fix indentation",
+      "revId": "2518858d0fc31f6b702db50c05be5bd2be556f38",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "44c3bc42_af993d6c",
+        "filename": "streamer-restproxy-service/src/main/resources/application.properties",
+        "patchSetId": 10
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-11-05T21:59:03Z",
+      "side": 1,
+      "message": "Please ignore the .properties file, every developer should have a copy.  Just commit the .properties.template file, with no passwords.",
+      "revId": "2518858d0fc31f6b702db50c05be5bd2be556f38",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4af7d302_cec38a08",
+        "filename": "streamer-restproxy-service/src/test/java/org/acumos/streamer/restproxy/demo/DemoApplicationTests.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-11-05T21:59:03Z",
+      "side": 1,
+      "message": "Please add license header",
+      "revId": "2518858d0fc31f6b702db50c05be5bd2be556f38",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "df4f3299_f640eed8",
+        "filename": "streamer-restproxy-service/src/test/java/org/acumos/streamer/restproxy/demo/DemoApplicationTests.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-11-05T21:59:03Z",
+      "side": 1,
+      "message": "Please add assertion or something to check the results",
+      "revId": "2518858d0fc31f6b702db50c05be5bd2be556f38",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "87b9d01b_11d38939",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/SchedulerJob.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-11-05T21:59:03Z",
+      "side": 1,
+      "message": "pls make private",
+      "range": {
+        "startLine": 43,
+        "startChar": 1,
+        "endLine": 43,
+        "endChar": 12
+      },
+      "revId": "2518858d0fc31f6b702db50c05be5bd2be556f38",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e0e66a2e_47e1f3b3",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/SchedulerJob.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-11-05T21:59:03Z",
+      "side": 1,
+      "message": "pls make private",
+      "range": {
+        "startLine": 46,
+        "startChar": 1,
+        "endLine": 46,
+        "endChar": 18
+      },
+      "revId": "2518858d0fc31f6b702db50c05be5bd2be556f38",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c9da97b4_165b3aed",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/SchedulerJob.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-11-05T21:59:03Z",
+      "side": 1,
+      "message": "Typo",
+      "range": {
+        "startLine": 55,
+        "startChar": 12,
+        "endLine": 55,
+        "endChar": 19
+      },
+      "revId": "2518858d0fc31f6b702db50c05be5bd2be556f38",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "81693afc_6751c204",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/common/DataStreamerUtil.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-11-05T21:59:03Z",
+      "side": 1,
+      "message": "Pls make private",
+      "range": {
+        "startLine": 74,
+        "startChar": 1,
+        "endLine": 74,
+        "endChar": 12
+      },
+      "revId": "2518858d0fc31f6b702db50c05be5bd2be556f38",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "faf0e60f_1d33775e",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/common/DataStreamerUtil.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-11-05T21:59:03Z",
+      "side": 1,
+      "message": "Why autowire the Environment object then use System.getProperty()?  This is weird.",
+      "range": {
+        "startLine": 79,
+        "startChar": 15,
+        "endLine": 79,
+        "endChar": 33
+      },
+      "revId": "2518858d0fc31f6b702db50c05be5bd2be556f38",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b7fdff07_ab7cd757",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/common/DataStreamerUtil.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-11-05T21:59:03Z",
+      "side": 1,
+      "message": "See above",
+      "range": {
+        "startLine": 99,
+        "startChar": 15,
+        "endLine": 99,
+        "endChar": 33
+      },
+      "revId": "2518858d0fc31f6b702db50c05be5bd2be556f38",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f61f97a6_6221d745",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/controller/RestConsumerServiceImpl.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-11-05T21:59:03Z",
+      "side": 1,
+      "message": "pls make private",
+      "revId": "2518858d0fc31f6b702db50c05be5bd2be556f38",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e3b422f7_c1881453",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/service/ConsumerServiceImpl.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-11-05T21:59:03Z",
+      "side": 1,
+      "message": "Pls make private",
+      "revId": "2518858d0fc31f6b702db50c05be5bd2be556f38",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e21c275d_5bd93c8e",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/service/ConsumerServiceImpl.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-11-05T21:59:03Z",
+      "side": 1,
+      "message": "pls make private",
+      "revId": "2518858d0fc31f6b702db50c05be5bd2be556f38",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a8e9261b_db452c58",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/service/MessageRouterTask.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-11-05T21:59:03Z",
+      "side": 1,
+      "message": "pls make private",
+      "range": {
+        "startLine": 88,
+        "startChar": 1,
+        "endLine": 88,
+        "endChar": 12
+      },
+      "revId": "2518858d0fc31f6b702db50c05be5bd2be556f38",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "11b6e3de_181421b0",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/service/MessageRouterTask.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-11-05T21:59:03Z",
+      "side": 1,
+      "message": "pls make private",
+      "revId": "2518858d0fc31f6b702db50c05be5bd2be556f38",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0484dec7_e232581d",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/service/MessageRouterTask.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 362,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-11-05T21:59:03Z",
+      "side": 1,
+      "message": "fix to match method name",
+      "range": {
+        "startLine": 362,
+        "startChar": 14,
+        "endLine": 362,
+        "endChar": 31
+      },
+      "revId": "2518858d0fc31f6b702db50c05be5bd2be556f38",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
