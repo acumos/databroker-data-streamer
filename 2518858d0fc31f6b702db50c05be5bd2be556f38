@@ -220,6 +220,30 @@
     },
     {
       "key": {
+        "uuid": "b9b0858c_0890e671",
+        "filename": "streamer-restproxy-service/pom.xml",
+        "patchSetId": 10
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 225
+      },
+      "writtenOn": "2018-11-06T19:17:15Z",
+      "side": 1,
+      "message": "yes this service can also be deployed on docker container, its a user choice",
+      "parentUuid": "e01c7865_deef09f9",
+      "range": {
+        "startLine": 42,
+        "startChar": 12,
+        "endLine": 42,
+        "endChar": 34
+      },
+      "revId": "2518858d0fc31f6b702db50c05be5bd2be556f38",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "3f817c76_7a85a68f",
         "filename": "streamer-restproxy-service/pom.xml",
         "patchSetId": 10
@@ -231,6 +255,24 @@
       "writtenOn": "2018-11-05T21:59:03Z",
       "side": 1,
       "message": "Pls fix indentation",
+      "revId": "2518858d0fc31f6b702db50c05be5bd2be556f38",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2874b702_819a40e0",
+        "filename": "streamer-restproxy-service/pom.xml",
+        "patchSetId": 10
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 225
+      },
+      "writtenOn": "2018-11-06T19:17:15Z",
+      "side": 1,
+      "message": "fixed",
+      "parentUuid": "3f817c76_7a85a68f",
       "revId": "2518858d0fc31f6b702db50c05be5bd2be556f38",
       "serverId": "655300a2-7a56-4504-9153-881edd907bea",
       "unresolved": true
@@ -288,6 +330,24 @@
       "writtenOn": "2018-11-05T21:59:03Z",
       "side": 1,
       "message": "Please ignore the .properties file, every developer should have a copy.  Just commit the .properties.template file, with no passwords.",
+      "revId": "2518858d0fc31f6b702db50c05be5bd2be556f38",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d94e5a1d_fc347c10",
+        "filename": "streamer-restproxy-service/src/main/resources/application.properties",
+        "patchSetId": 10
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 225
+      },
+      "writtenOn": "2018-11-06T19:17:15Z",
+      "side": 1,
+      "message": "i just followed portal-mktplace configuration \nhttps://gerrit.acumos.org/r/gitweb?p\u003dportal-marketplace.git;a\u003dtree;f\u003dacumos-portal-be;h\u003d2ad6d091f6a12061f644f4edabc5c8f32ad4c93c;hb\u003dHEAD\n\napplication.properties dont have real values, it just similar to template",
+      "parentUuid": "44c3bc42_af993d6c",
       "revId": "2518858d0fc31f6b702db50c05be5bd2be556f38",
       "serverId": "655300a2-7a56-4504-9153-881edd907bea",
       "unresolved": true
@@ -431,6 +491,30 @@
       "writtenOn": "2018-11-05T21:59:03Z",
       "side": 1,
       "message": "Why autowire the Environment object then use System.getProperty()?  This is weird.",
+      "range": {
+        "startLine": 79,
+        "startChar": 15,
+        "endLine": 79,
+        "endChar": 33
+      },
+      "revId": "2518858d0fc31f6b702db50c05be5bd2be556f38",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "adbb558a_16172437",
+        "filename": "streamer-service/src/main/java/org/acumos/streamer/common/DataStreamerUtil.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 225
+      },
+      "writtenOn": "2018-11-06T19:17:15Z",
+      "side": 1,
+      "message": "i know this is weird but this is how coded by developer and will have impact if i remove just now, can we do this cleaning later?",
+      "parentUuid": "faf0e60f_1d33775e",
       "range": {
         "startLine": 79,
         "startChar": 15,
