@@ -1,3 +1,4 @@
 # UUID                                                                                     	Group Name
 #
+d0def9d51cb1af636d97c134996bdf18ba06f20a                                                   	saml/acumos-gerrit-databroker-data-streamer-committers
 ldap:cn=acumos-gerrit-databroker-data-streamer-committers,ou=Groups,dc=freestandards,dc=org	ldap/acumos-gerrit-databroker-data-streamer-committers
